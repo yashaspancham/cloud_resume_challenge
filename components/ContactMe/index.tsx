@@ -11,13 +11,12 @@ const ContactMe = () => {
     timeline.from(ContactMeRef.current, {
       scrollTrigger: {
         trigger: ContactMeRef.current,
-        start: "center top",
-        end: "bottom bottom",
-        // markers: true,
+        start: "top center",
+        end: "+=100",
         toggleActions: "play pause reverse reset",
         scrub: true,
       },
-      x: -200,
+      x: 100,
       opacity: 0,
     });
   }, []);

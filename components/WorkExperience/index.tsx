@@ -11,8 +11,7 @@ const WorkExperience = () => {
       scrollTrigger: {
         trigger: WorkExperienceRef.current,
         start: "top bottom",
-        end: "top center",
-        markers: true,
+        end: "+=200",
         toggleActions: "play pause reverse reset",
         scrub: true,
       },

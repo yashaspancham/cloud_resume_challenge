@@ -11,6 +11,8 @@ const TechStack = () => {
       scrollTrigger: {
         trigger: TechStackRef.current,
         start: "top bottom",
+        end:"+=200",
+        markers: false,
         toggleActions: "play pause reverse reset",
         scrub: 1,
       },

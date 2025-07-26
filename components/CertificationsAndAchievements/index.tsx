@@ -12,14 +12,13 @@ const CertificationsAndAchievements = () => {
     timeline.from(CertificationsAndAchievementsRef.current, {
       scrollTrigger: {
         trigger: CertificationsAndAchievementsRef.current,
-        start: "center top",
-        end: "bottom bottom",
-        // markers: true,
+        start: "top center",
+        end: "+=200",
         toggleActions: "play pause reverse reset",
         scrub: true,
       },
-      x: -200,
-      opacity: 0,
+      x: 100,
+      opacity: 0.5,
     });
 
   }, []);
