@@ -12,7 +12,7 @@ const TechStack = () => {
       scrollTrigger: {
         trigger: TechStackRef.current,
         start: "top center",
-        end:"+=200",
+        end: "+=200",
         toggleActions: "play pause reverse reset",
         scrub: 1,
       },
@@ -38,15 +38,17 @@ const TechStack = () => {
         />
         <img src="/assets/logo/html.png" alt="html logo" width={40} />
         <img src="/assets/logo/css.png" alt="css logo" width={40} />
-        <img src="/assets/logo/nodejs.png" alt="node logo" width={40} />
-        <img src="/assets/logo/sql-server.png" alt="sql logo" width={40} />
-        <img src="/assets/logo/Route 53.png" alt="Route 53 logo" width={40} />
-        <img src="/assets/logo/EC2.png" alt="EC2 logo" width={40} />
+        <img src="/assets/logo/gsap-logo.png" alt="GSAP logo" width={40} />
+        <img src="/assets/logo/threejs-logo.png" alt="3.js logo" width={40} />
         <img
           src="/assets/logo/Simple Storage Service.png"
           alt="S3 logo"
           width={40}
         />
+        <img src="/assets/logo/Route 53.png" alt="Route 53 logo" width={40} />
+        <img src="/assets/logo/nodejs.png" alt="node logo" width={40} />
+        <img src="/assets/logo/sql-server.png" alt="sql logo" width={40} />
+        <img src="/assets/logo/EC2.png" alt="EC2 logo" width={40} />
         <img src="/assets/logo/nginx.png" alt="nginx logo" width={40} />
         <img src="/assets/logo/github.png" alt="github logo" width={40} />
       </div>
