@@ -21,7 +21,7 @@ const TechStack = () => {
     });
   }, []);
   return (
-    <div className="flex flex-col justify-end" ref={TechStackRef}>
+    <div className="flex flex-col justify-end xl:max-w-[50%]" ref={TechStackRef}>
       <p className="text-3xl md:text-4xl">Tech Stack</p>
       <div className="flex gap-5 mt-7 flex-wrap">
         <img src="/assets/logo/nextjs.png" alt="nextjs logo" width={40} />
@@ -47,8 +47,10 @@ const TechStack = () => {
         />
         <img src="/assets/logo/Route 53.png" alt="Route 53 logo" width={40} />
         <img src="/assets/logo/nodejs.png" alt="node logo" width={40} />
+        <img src="/assets/logo/python-logo.png" alt="python logo" width={40} />
         <img src="/assets/logo/sql-server.png" alt="sql logo" width={40} />
         <img src="/assets/logo/EC2.png" alt="EC2 logo" width={40} />
+        <img src="/assets/logo/tux.png" alt="linux logo" width={40} />
         <img src="/assets/logo/nginx.png" alt="nginx logo" width={40} />
         <img src="/assets/logo/github.png" alt="github logo" width={40} />
       </div>

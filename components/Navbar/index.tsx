@@ -58,7 +58,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex bg-black text-white  w-full px-5 md:px-20 justify-between pt-10 ${
+      className={`flex bg-black text-white  w-full p-1 sm:px-3 md:px-5 md:px-20 justify-between pt-10 ${
         navPageBool
           ? "bg-[black] top-0 absolute z-1 h-full"
           : "h-20 items-start"
