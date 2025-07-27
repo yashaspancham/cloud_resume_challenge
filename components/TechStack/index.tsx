@@ -7,22 +7,22 @@ const TechStack = () => {
   let timeline = gsap.timeline();
   const TechStackRef = useRef(null);
   useEffect(() => {
+    const xValue = window.innerWidth < 820 ? 0 : 100;
     timeline.from(TechStackRef.current, {
       scrollTrigger: {
         trigger: TechStackRef.current,
-        start: "top bottom",
+        start: "top center",
         end:"+=200",
-        markers: false,
         toggleActions: "play pause reverse reset",
         scrub: 1,
       },
-      x: 100,
+      x: xValue,
       opacity: 0,
     });
   }, []);
   return (
     <div className="flex flex-col justify-end" ref={TechStackRef}>
-      <p className="text-4xl">Tech Stack</p>
+      <p className="text-3xl md:text-4xl">Tech Stack</p>
       <div className="flex gap-5 mt-7 flex-wrap">
         <img src="/assets/logo/nextjs.png" alt="nextjs logo" width={40} />
         <img src="/assets/logo/react.png" alt="react logo" width={40} />

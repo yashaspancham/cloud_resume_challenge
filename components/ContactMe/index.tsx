@@ -8,6 +8,7 @@ const ContactMe = () => {
   let timeline = gsap.timeline();
   const ContactMeRef = useRef(null);
   useEffect(() => {
+    const xValue = window.innerWidth < 820 ? 0 : 100;
     timeline.from(ContactMeRef.current, {
       scrollTrigger: {
         trigger: ContactMeRef.current,
@@ -16,20 +17,16 @@ const ContactMe = () => {
         toggleActions: "play pause reverse reset",
         scrub: true,
       },
-      x: 100,
+      x: xValue,
       opacity: 0,
     });
   }, []);
   return (
-    <div ref={ContactMeRef}>
+    <div ref={ContactMeRef} className="w-fit">
       <h2 className="text-4xl font-bold">Contact Me</h2>
-      <p className="text-lg mt-7">
-        If you have any questions or would like to get in touch, feel free to
-        reach out!
-      </p>
+      <p className="text-lg md:mt-7 wrap">
+        If you have any questions or would like to get in touch, feel free to reach out!</p>
       <div className="text-lg mt-2">
-        <p>Yashas Pancham K.R</p>
-        <p>📍 Bangalore, India</p>
         <p>📞 +91 8073980836</p>
         <p>📧 yashaspancham@gmail.com</p>
       </div>
