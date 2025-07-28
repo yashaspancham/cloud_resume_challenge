@@ -46,7 +46,7 @@ export default function Home() {
       >
         <ContactMe />
       </section>
-      <section className="h-[500px] w-full flex justify-center items-center text-md relative z-10 bg-green-900" >
+      <section className="h-[500px] w-full flex justify-center items-center text-md relative z-10" >
         <p>
         Thank you for you time and consideration!
         </p>
