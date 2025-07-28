@@ -21,12 +21,12 @@ const PersonalProjects = () => {
     });
   }, []);
   return (
-    <div className="flex gap-7 flex-col" ref={PersonalProjectsRef}>
+    <div className="flex gap-7 flex-col w-full xl:w-[50%]" ref={PersonalProjectsRef}>
       <p className="text-4xl">
         Personal Projects
       </p>
 
-      <div className="lg:w-[50%]">
+      <div>
         <p className="text-2xl  underline cursor-pointer italic">
           <a href="http://www.projectyreflections.com" target="_blank">
             Reflections

@@ -21,7 +21,7 @@ const CertificationsAndAchievements = () => {
     });
   }, []);
   return (
-    <div ref={CertificationsAndAchievementsRef}>
+    <div ref={CertificationsAndAchievementsRef} className="w-full xl:w-[50%]">
       <div className="text-3xl md:text-4xl">
         Certifications And Achievements
       </div>
