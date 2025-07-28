@@ -69,30 +69,52 @@ const Navbar = () => {
       </div>
       {loaded && (
         <div
-        onClick={()=>{
-          document.body.style.overflow = "";
-          setNavPageBool(false);
-        }}
+          onClick={() => {
+            document.body.style.overflow = "";
+            setNavPageBool(false);
+          }}
           className={`flex gap-10 text-white w-fit text-xl  ${
             navPageBool ? "flex-col justify-center" : "max-xl:hidden"
           }`}
         >
           <div ref={navOption1Ref1}>
-            <a href="#tech-stack">Tech Stack</a>
+            <a
+              href="#hi"
+              className="xl:hover:text-red-400"
+            >
+              Hi
+            </a>
+          </div>
+          <div ref={navOption1Ref1}>
+            <a
+              href="#tech-stack"
+              className="xl:hover:text-orange-400"
+            >
+              Tech Stack
+            </a>
           </div>
           <div ref={navOption1Ref2}>
-            <a href="#work-experience">Work Experience</a>
+            <a href="#work-experience" className="xl:hover:text-yellow-200">
+              Work Experience
+            </a>
           </div>
           <div ref={navOption1Ref3}>
-            <a href="#certifications-and-achievements">
+            <a
+              href="#certifications-and-achievements"
+              className="xl:hover:text-yellow-400"
+            >
               Certifications And Achievements
             </a>
           </div>
           <div ref={navOption1Ref4}>
-            <a href="#personal-projects">Personal Projects</a>
+            <a href="#personal-projects"
+            className="xl:hover:text-blue-200"
+            >Personal Projects</a>
           </div>
           <div ref={navOption1Ref5}>
-            <a href="#contact-me">Contact Me</a>
+            <a href="#contact-me"
+            className="xl:hover:text-blue-400"
+            >Contact Me</a>
           </div>
         </div>
       )}

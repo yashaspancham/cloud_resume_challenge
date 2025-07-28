@@ -10,10 +10,10 @@ import FireBall from "@/components/Fireball";
 export default function Home() {
   return (
     <main className="max-md:p-10 max-md:flex max-md:flex-col max-md:gap-20 bg-black text-white w-full h-full scroll-smooth">
-      <section className="2xl:h-[40vw] xl:h-[65vw] lg:h-[100vw] md:h-[110vw] sm:h-[120vw] h-[200vw] m-0 sm:m-10 sticky top-0 z-0">
+      <section className="2xl:h-[40vw] xl:h-[65vw] lg:h-[100vw] md:h-[110vw] sm:h-[120vw] h-[200vw] m-0 sm:m-10 xl:sticky xl:top-0 xl:z-0">
       <FireBall />
       </section>
-      <section className="mt-20 md:mx-20 md:p-20 ">
+      <section className="mt-20 md:mx-20 md:p-20"  id="hi">
         <Info />
       </section>
       <section
