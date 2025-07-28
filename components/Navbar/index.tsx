@@ -80,7 +80,7 @@ const Navbar = () => {
           <div ref={navOption1Ref1}>
             <a
               href="#hi"
-              className="xl:hover:text-red-400"
+              className="xl:hover:text-[#e40001]"
             >
               Hi
             </a>
@@ -88,32 +88,32 @@ const Navbar = () => {
           <div ref={navOption1Ref1}>
             <a
               href="#tech-stack"
-              className="xl:hover:text-orange-400"
+              className="xl:hover:text-[#fe0100]"
             >
               Tech Stack
             </a>
           </div>
           <div ref={navOption1Ref2}>
-            <a href="#work-experience" className="xl:hover:text-yellow-200">
+            <a href="#work-experience" className="xl:hover:text-[#fae769]">
               Work Experience
             </a>
           </div>
           <div ref={navOption1Ref3}>
             <a
               href="#certifications-and-achievements"
-              className="xl:hover:text-yellow-400"
+              className="xl:hover:text-[#fed854]"
             >
               Certifications And Achievements
             </a>
           </div>
           <div ref={navOption1Ref4}>
             <a href="#personal-projects"
-            className="xl:hover:text-blue-200"
+            className="xl:hover:text-[#7a01f6]"
             >Personal Projects</a>
           </div>
           <div ref={navOption1Ref5}>
             <a href="#contact-me"
-            className="xl:hover:text-blue-400"
+            className="xl:hover:text-[#4701c2]"
             >Contact Me</a>
           </div>
         </div>
