@@ -30,7 +30,7 @@ function DonutRing({ rotateX, rotateY, rotateZ,color,slowedAnimation }: DonutRin
       <meshStandardMaterial
         color={color}
         emissive={color}
-        emissiveIntensity={5}
+        emissiveIntensity={2}
         metalness={2}
         roughness={0.0}
       />

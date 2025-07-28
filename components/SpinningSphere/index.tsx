@@ -34,7 +34,7 @@ function SpinningSphere({color,slowedAnimation}: SpinningSpherePropsTypes) {
         color={color}
         emissive={color}
         emissiveIntensity={2}
-        metalness={1}
+        metalness={2}
         roughness={0.0}
       />
     </mesh>
