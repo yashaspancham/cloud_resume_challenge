@@ -3,6 +3,7 @@ import Contacts from "@/components/Contacts";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { countVisitors } from "@/API";
 
 const Info = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -22,6 +23,7 @@ const Info = () => {
       x: xValue,
       opacity: 0,
     });
+    countVisitors();
   }, []);
   return (
     <div className="flex flex-col" ref={infoRef}>
