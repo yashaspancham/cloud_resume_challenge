@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Head from "next/head";
 import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-CWVF2EQMBN"
@@ -41,7 +40,7 @@ export default function RootLayout({
       `,
           }}
         />
-      </Head>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black font-geist-sans w-full`}
       >
