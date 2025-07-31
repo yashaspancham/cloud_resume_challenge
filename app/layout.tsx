@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-
+import Head from "next/head";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,6 +25,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-CWVF2EQMBN"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CWVF2EQMBN');
+      `,
+          }}
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black font-geist-sans w-full`}
       >
