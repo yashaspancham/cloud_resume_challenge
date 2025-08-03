@@ -1,4 +1,6 @@
-"use client";
+'use client';
+
+
 import { useSearchParams } from "next/navigation";
 import { projectsData } from "@/projectsData/projectDetails";
 
@@ -21,7 +23,7 @@ const ProjectDetails = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          visit wesbite
+          visit website
         </a>
         )
       </p>
@@ -79,7 +81,7 @@ const ProjectDetails = () => {
                 rel="noopener noreferrer"
               >
                 Front-end
-              </a> and{" "}
+              </a>{" "}
               <a
                 className="text-blue-500 underline"
                 href={data.githubbackEnd}
