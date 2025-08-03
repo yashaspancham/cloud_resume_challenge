@@ -34,8 +34,7 @@ const WorkExperience = () => {
               business websites across various domains like healthcare, IT, and
               e-commerce using <span className="text-[#f4fe6c]">Next.js</span>,{" "}
               <span className="text-[#f4fe6c]">Angular</span>, and{" "}
-              <span className="text-[#f4fe6c]">Firebase</span>, reducing page
-              load time by 30% for improved user experience.
+              <span className="text-[#f4fe6c]">Firebase</span>.
             </li>
             <li className=" wrap">
               Built e-commerce websites and dashboards with scalable, reusable

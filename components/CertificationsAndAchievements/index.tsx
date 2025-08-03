@@ -43,7 +43,7 @@ const CertificationsAndAchievements = () => {
 
       <div className="flex flex-col lg:flex-row gap-5 mt-7 lg:items-center">
         <img
-          src="/assets/logo/saa-badge.png"
+          src="/assets/logo/clf-badge.png"
           alt="AWS Solutions Architect logo"
           className="w-40"
         />
