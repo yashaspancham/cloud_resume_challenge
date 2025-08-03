@@ -1,11 +1,14 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import gsap from "gsap";
 
 const PersonalProjects = () => {
   let timeline = gsap.timeline();
   const PersonalProjectsRef = useRef(null);
+  const router = useRouter();
+
   useEffect(() => {
     const xValue = window.innerWidth < 820 ? 0 : -100;
     timeline.from(PersonalProjectsRef.current, {
@@ -20,6 +23,22 @@ const PersonalProjects = () => {
       opacity: 0,
     });
   }, []);
+
+  const projects = [
+    {
+      title: "Reflections",
+      name: "reflections",
+      description:
+        "A digital diary application for capturing daily thoughts and memories.",
+    },
+    {
+      title: "Cloud Resume Challenge",
+      name: "cloud-resume-challenge",
+      description:
+        "A project to build a resume website hosted on AWS, showcasing cloud and Animation skills.",
+    },
+  ];
+
   return (
     <div
       className="flex gap-7 flex-col w-full xl:w-[50%]"
@@ -27,78 +46,19 @@ const PersonalProjects = () => {
     >
       <p className="text-4xl">Personal Projects</p>
 
-      <div>
-        <p className="text-2xl  underline cursor-pointer italic">
-          <a href="http://www.projectyreflections.com" target="_blank">
-            Reflections
-          </a>
-        </p>
-        <ul className="list-disc marker:text-white ml-5">
-          <li>
-            Reflections is a thoughtfully crafted{" "}
-            <span className="text-[#9700ff]">digital diary application</span>
-            built to offer users a seamless and secure space to capture their
-            daily thoughts, memories, and reflections. Whether it’s journaling a
-            personal insight or tracking everyday progress, Reflections provides
-            a calming, minimalist interface that prioritizes both user
-            experience and data privacy.
-          </li>
-          <li>
-            On the technical side, the app is built with a modern and scalable
-            architecture. The frontend is developed using{" "}
-            <span className="text-[#9700ff]">React Native</span> with
-            <span className="text-[#9700ff]">TypeScript</span> and styled using{" "}
-            <span className="text-[#9700ff]">React Native Paper</span> and{" "}
-            <span className="text-[#9700ff]">Expo</span> for a consistent
-            cross-platform experience. The backend is powered by
-            <span className="text-[#9700ff]">Express.js</span>, managing
-            business logic and secure API interactions.
-            <span className="text-[#9700ff]">PostgreSQL</span> serves as the
-            relational database, ensuring structured and reliable data storage.
-          </li>
-          <li>
-            To streamline development and deployment, I implemented{" "}
-            <span className="text-[#9700ff]">CI/CD</span>
-            pipelines using{" "}
-            <span className="text-[#9700ff]">GitHub Actions</span>, enabling
-            automated builds and deployments on each code push. The app is
-            hosted on <span className="text-[#9700ff]">AWS EC2</span>, with
-            static content managed via{" "}
-            <span className="text-[#9700ff]">Amazon S3</span>, domain routing
-            handled through
-            <span className="text-[#9700ff]">Amazon Route 53</span>, and{" "}
-            <span className="text-[#9700ff]">NGINX</span> used as a reverse
-            proxy
-          </li>
-          <li>
-            This project demonstrates my ability to take a product from concept
-            to deployment — covering{" "}
-            <span className="text-[#9700ff]">design</span>,{" "}
-            <span className="text-[#9700ff]">development</span>,{" "}
-            <span className="text-[#9700ff]">DevOps</span>, and{" "}
-            <span className="text-[#9700ff]">cloud hosting</span>. It reflects
-            my growing expertise in building cloud-ready applications and
-            integrating modern engineering practices.
-          </li>
-          <li>
-            Check it out on Github-{" "}
-            <a
-              href="https://github.com/yashaspancham/project_y_app"
-              target="_blank"
-              className="underline text-[#9700ff]"
-            >
-              Front-end
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://github.com/yashaspancham/project_y_backend"
-              target="_blank"
-              className="underline text-[#9700ff]"
-            >
-              Back-end
-            </a>
-          </li>
-        </ul>
+      <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center">
+        {projects.map((item, index) => (
+          <div
+            className="w-46 h-[250px] flex flex-col gap-3"
+            key={index}
+            onClick={() =>
+              router.push(`/project-details?project-name=${item.name}`)
+            }
+          >
+            <p className="text-2xl">{item.title}</p>
+            <p className="text-sm">{item.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
