@@ -39,7 +39,6 @@ useEffect(() => {
           setColor(color);
           setSlowedAnimation(true)
         } else if (currentSection === iddName) {
-          // If we scroll out of the current section, fallback
           currentSection = null;
           setTargetX(0);
           setSlowedAnimation(false)

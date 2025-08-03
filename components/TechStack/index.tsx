@@ -46,6 +46,12 @@ const techLogos = [
   { techName: "Linux", src: "/assets/logo/tux.png", alt: "linux logo" },
   { techName: "NGINX", src: "/assets/logo/nginx.png", alt: "nginx logo" },
   { techName: "Github", src: "/assets/logo/github.png", alt: "github logo" },
+  { techName: "Lambda", src: "/assets/logo/lambdaIcon.png", alt: "Lambda logo" },
+  { techName: "DynamoDB", src: "/assets/logo/dynamoDBIcon.jpeg", alt: "DynamoDB logo" },
+  { techName: "CloudFront", src: "/assets/logo/cloudfrontIcon.png", alt: "CloudFront logo" },
+  { techName: "IAM", src: "/assets/logo/IAMIcon.jpeg", alt: "IAM logo" },
+    { techName: "API Gateway", src: "/assets/logo/APIGatewayIcon.jpeg", alt: "API Gateway logo" },
+
 ];
 
 const TechStack = () => {
@@ -78,7 +84,11 @@ const TechStack = () => {
             key={idx}
             className="relative group flex flex-col items-center gap-1"
           >
-            <img src={logo.src} alt={logo.alt} className="md:w-[80px] w-[60px]" />
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className="md:w-[80px] w-[60px]"
+            />
             <p className="absolute hidden group-hover:block bg-black text-center text-white text-sm mt-6 px-2 py-1 rounded">
               {logo.techName}
             </p>

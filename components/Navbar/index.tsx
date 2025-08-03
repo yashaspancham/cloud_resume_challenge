@@ -2,15 +2,18 @@
 
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [loaded, setLoaded] = useState(false);
   const [navPageBool, setNavPageBool] = useState(false);
+  const [visibility, setVisibility] = useState(false);
   const navOption1Ref1 = useRef(null);
   const navOption1Ref2 = useRef(null);
   const navOption1Ref3 = useRef(null);
   const navOption1Ref4 = useRef(null);
   const navOption1Ref5 = useRef(null);
+  const pathname = usePathname()
   let timeline = gsap.timeline();
 
   const handleBurgerClick = () => {
@@ -54,9 +57,13 @@ const Navbar = () => {
       duration: 1.5,
       ease: "elastic.out",
     });
+    if(pathname==="/"){
+      console.log("pathname: ",pathname);
+      setVisibility(true);
+    }
   }, [loaded]);
 
-  return (
+  return (visibility &&
     <div
       className={`flex bg-black text-white  w-full p-1 sm:px-3 md:px-5 md:px-20 justify-between pt-10 ${
         navPageBool
