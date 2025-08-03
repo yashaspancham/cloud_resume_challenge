@@ -49,7 +49,7 @@ const PersonalProjects = () => {
       <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center">
         {projects.map((item, index) => (
           <div
-            className="w-46 h-[250px] flex flex-col gap-3  p-5 rounded-xl hover:shadow-[-1px_1px_5px_0px_rgba(255,255,255,0.75)] hover:cursor-pointer"
+            className="w-46 h-[250px] flex flex-col gap-3  p-5 rounded-xl hover:shadow-[-1px_1px_5px_0px_rgba(255,255,255,0.75)] hover:cursor-pointer border-[0.5px] border-[#1a1a1a]"
             key={index}
             onClick={() =>
               router.push(`/project-details?project-name=${item.name}`)

@@ -80,7 +80,7 @@ const PersonalProjectComp = () => {
                 rel="noopener noreferrer"
               >
                 Front-end
-              </a>{" "}
+              </a> and{" "}
               <a
                 className="text-blue-500 underline"
                 href={data.githubbackEnd}
