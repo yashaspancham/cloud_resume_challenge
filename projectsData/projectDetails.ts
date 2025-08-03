@@ -1,6 +1,9 @@
 export const projectsData = {
   reflections: {
     title: "Reflections",
+    Website: "https://www.projectyreflections.com",
+    githubFrontEnd: "https://github.com/yashaspancham/project_y_app",
+    githubbackEnd: "https://github.com/yashaspancham/project_y_backend",
     architectureimage: "/DrawIO/Reflections.drawio.png",
     description:
       "A digital diary application for capturing daily thoughts and memories.",
@@ -30,6 +33,9 @@ export const projectsData = {
   },
   "cloud-resume-challenge": {
     title: "Cloud Resume Challenge",
+    Website: "https://www.yashas-dev.com",
+    githubFrontEnd: "https://github.com/yashaspancham/yashas.dev",
+    githubbackEnd: "https://github.com/yashaspancham/yashas.dev.lambda",
     architectureimage: "/DrawIO/Cloud Resume Challenge.drawio.png",
     description:
       "A project to build a resume website hosted on AWS, showcasing cloud and Animation skills.",

@@ -12,10 +12,19 @@ const ProjectDetails = () => {
   const data = projectsData[projectName as ProjectKey];
   return (
     <div className="text-white xl:p-20 lg:p-15 md:p-10 sm:p-5 p-2">
-      <div className="text-2xl sm:text-4xl lg:text-8xl">
-        {data.title}
-      </div>
-      <p className="text-xs sm:text-sm xl:text-md">{data.description}</p>
+      <div className="text-2xl sm:text-4xl lg:text-8xl">{data.title}</div>
+      <p className="text-xs sm:text-sm xl:text-md">
+        {data.description}(
+        <a
+          className="text-blue-500 underline"
+          href={data.Website}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          visit wesbite
+        </a>
+        )
+      </p>
       <div className="w-full flex flex-col gap-10 my-10">
         <div className="flex flex-col gap-5">
           <p className="text-xl sm:text-2xl lg:text-4xl">Why??</p>
@@ -61,6 +70,25 @@ const ProjectDetails = () => {
                 {item}
               </li>
             ))}
+            <li className="text-sm md:text-md xl:text-lg">
+              Github-
+              <a
+                className="text-blue-500 underline"
+                href={data.githubFrontEnd}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Front-end
+              </a> and{" "}
+              <a
+                className="text-blue-500 underline"
+                href={data.githubbackEnd}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Back-end
+              </a>
+            </li>
           </ul>
         </div>
       </div>
