@@ -23,7 +23,7 @@ const Info = () => {
       x: xValue,
       opacity: 0,
     });
-    countVisitors();
+    // countVisitors();
   }, []);
   return (
     <div className="flex flex-col" ref={infoRef}>

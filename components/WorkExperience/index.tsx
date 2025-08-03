@@ -32,7 +32,9 @@ const WorkExperience = () => {
             <li className=" wrap">
               Implemented responsive, scalable, and optimized web apps for
               business websites across various domains like healthcare, IT, and
-              e-commerce using Next.js, Angular, and Firebase, reducing page
+              e-commerce using <span className="text-[#f4fe6c]">Next.js</span>,{" "}
+              <span className="text-[#f4fe6c]">Angular</span>, and{" "}
+              <span className="text-[#f4fe6c]">Firebase</span>, reducing page
               load time by 30% for improved user experience.
             </li>
             <li className=" wrap">
@@ -42,17 +44,23 @@ const WorkExperience = () => {
             </li>
             <li className=" wrap">
               Collaborated with designers, backend teams, and customers to
-              ensure seamless integration of RESTful APIs, aligning with
-              business needs and delivering user-friendly interfaces.
+              ensure seamless integration of{" "}
+              <span className="text-[#f4fe6c]">RESTful APIs</span>, aligning
+              with business needs and delivering user-friendly interfaces.
             </li>
             <li className=" wrap">
-              Enhanced website SEO strategies with business analysts, improving
-              visibility and search engine rankings, leading to a 15% increase
-              in organic traffic.
+              Enhanced website <span className="text-[#f4fe6c]">SEO</span>{" "}
+              strategies with business analysts, improving visibility and search
+              engine rankings, leading to a 15% increase in organic traffic.
             </li>
             <li className=" wrap">
-              Leveraged technologies like Redux, Material UI, Tailwind CSS,
-              Azure Blob Storage, and Strapi for efficient frontend development.
+              Leveraged technologies like{" "}
+              <span className="text-[#f4fe6c]">Redux</span>,{" "}
+              <span className="text-[#f4fe6c]">Material UI</span>,{" "}
+              <span className="text-[#f4fe6c]">Tailwind CSS</span>,
+              <span className="text-[#f4fe6c]">Azure Blob Storage</span>, and{" "}
+              <span className="text-[#f4fe6c]">Strapi</span> for efficient
+              frontend development.
             </li>
           </ul>
         </div>
@@ -65,8 +73,9 @@ const WorkExperience = () => {
           <p className="text-sm">Jan 2024-May 2025 @Codezyng</p>
           <ul className="list-disc marker:text-white ml-5 xl:w-[50%] text-md md:text-lg">
             <li className=" wrap">
-              Contributed to the development of a comprehensive CRM solution for
-              a gym management system, collaborating closely with designers and
+              Contributed to the development of a comprehensive{" "}
+              <span className="text-[#f4fe6c]">CRM</span> solution for a gym
+              management system, collaborating closely with designers and
               backend engineers to deliver an intuitive and user-centric
               experience.
             </li>
