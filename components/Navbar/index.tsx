@@ -58,7 +58,6 @@ const Navbar = () => {
       ease: "elastic.out",
     });
     if(pathname==="/"){
-      console.log("pathname: ",pathname);
       setVisibility(true);
     }
   }, [loaded]);
