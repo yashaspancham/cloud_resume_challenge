@@ -2,10 +2,12 @@
 
 import { useSearchParams } from "next/navigation";
 import { projectsData } from "@/projectsData/projectDetails";
+import { useRouter } from "next/navigation";
 
 const PersonalProjectComp = () => {
   const param = useSearchParams();
   type ProjectKey = keyof typeof projectsData;
+  const router = useRouter();
   let projectName: string | null = param.get("project-name");
   if (projectName === null) {
     projectName = "";
@@ -80,7 +82,8 @@ const PersonalProjectComp = () => {
                 rel="noopener noreferrer"
               >
                 Front-end
-              </a> and{" "}
+              </a>{" "}
+              and{" "}
               <a
                 className="text-blue-500 underline"
                 href={data.githubbackEnd}
@@ -92,6 +95,10 @@ const PersonalProjectComp = () => {
             </li>
           </ul>
         </div>
+        <button
+          className="text-xl sm:text-2xl lg:text-4xl hover:cursor-pointer bg-[#191919] hover:bg-[#262626] m-5 w-fit p-2 xl:p-4 rounded-xl"
+        ><a href="https://www.yashas-dev.com">Return</a>
+        </button>
       </div>
     </>
   );

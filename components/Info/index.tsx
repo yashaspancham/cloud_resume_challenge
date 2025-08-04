@@ -36,7 +36,7 @@ const Info = () => {
         </p>
       </div>
       <Contacts />
-      <button className="self-start ml-5 mt-5 bg-[#191919] p-2 xl:p-4 rounded-xl hover:bg-[#262626]">
+      <button className="self-start ml-5 mt-5 bg-[#191919] hover:bg-[#262626] p-2 xl:p-4 rounded-xl">
         <a
           className=""
           href="http://www.projectyreflections.com/Yashas's%20Resume.pdf"
