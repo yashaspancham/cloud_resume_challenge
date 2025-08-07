@@ -37,6 +37,12 @@ const PersonalProjects = () => {
       description:
         "A project to build a resume website hosted on AWS, showcasing cloud and Animation skills.",
     },
+    {
+      title: "Simple ETL",
+      name: "simple-ETL",
+      description:
+        "Data from .csv in S3 to a Database in RDS, using AWS Lambda and Python.",
+    },
   ];
 
   return (

@@ -61,4 +61,63 @@ export const projectsData = {
       "I learned about CI/CD pipelines and how to implement them using GitHub Actions",
     ],
   },
+  "simple-ETL": {
+    title: "Simple ETL",
+    why: "I wanted to learn about ETL processes, how to implement it and learn about how its done in AWS.",
+    description:
+      "A simple ETL process that extracts data from a CSV file(in AWS S3), transforms it with python(in AWS Lambda), and loads it into a rational database(MariaBD locally and MySQL on AWS Aurora and RDS).",
+    challengesAndHowItWasSolved: `The most challenging part was connecting the lambda function to the RDS database. Locally I had used a MariaDB database, but I had to switch to MySQL for AWS Aurora and RDS. I had to learn about the differences between the two databases and how to connect to them using Python.`,
+    Achitecture: [
+      "Locally, I stored the .csv file in the file system, python file is used for ETL and MariaDB as DB engine",
+      "In AWS, the .csv file is stored in S3, the python file is used for ETL in AWS Lambda and MySQL as DB engine",
+    ],
+    architectureimage: "/DrawIO/simpleETL.drawio.png",
+    DATA: [
+      {
+        text: "The Source CSV file is stored in AWS S3 and locally in the file system.",
+      },
+      {
+        text: "Data set: ",
+        link: "https://www.datablist.com/learn/csv/download-sample-csv-files#download-customers-sample-csv-files",
+      },
+      {
+        text: "Initally, I taught to use a simple databse with 1 table but later I decided to create a more complex database with multiple tables and relationships.",
+      },
+      {
+        text: "I vibe coded an optimal DB schema with 5 tables.",
+        img: ["/assets/charts/simpleETLDBSchema.drawio.png", "DB schema"],
+      },
+      {
+        text: "The SQL query to create the database Tables is available ",
+        link: "https://github.com/yashaspancham/simple-ETL/blob/main/docs/setUp.sql",
+      },
+      {
+        text: "Initally, I simply took a row from .csv file and inserted it into the DB, but later I inserted 10 rows at once to improve performance.",
+        img: ["/assets/charts/Time&Space.png", "performance mertics"], //first is the image path, second is the alt text
+      },
+      {
+        text: "Locally, I was able to insert 500,000 rows in 35 minutes. However, on AWS, the maximum I could insert was 100,000 rows, since a Lambda function can run for a maximum of 15 minutes.",
+      },
+    ],
+    Tech: [
+      "The ETL process is implemented using Python",
+      "AWS Lambda is used for serverless execution of the ETL process",
+      "Locally, MariaDB is used as the relational database for structured data storage",
+      "In AWS, AWS Aurora and RDS with MySQL is used as the relational database for structured data storage",
+      "Initially, I used MariaDB on AWS Aurora and RDS. However, while adding a Layer to Lambda, I had to switch to MySQL because the mariadb pip package was not compatible with Lambda due to its dependency on C libraries. So, I switched to pymysql and decided to use MySQL on AWS Aurora and RDS instead.",
+      "AWS S3 is used for storing the input CSV file",
+      "Locally, I used bash terminal for interacting with the MariaDB and AWS CloudShell for MySQL on AWS Aurora and RDS.",
+      "To allow AWS Lambda to access S3 and Aurora (RDS), I used AWS IAM roles.",
+    ],
+    github: "https://github.com/yashaspancham/simple-ETL",
+    whatILearned: [
+      "Designed a serverless ETL architecture leveraging AWS Lambda, S3, and Amazon Aurora (MySQL-compatible) within a VPC.",
+      "Navigated Lambda runtime constraints, including timeout limits and package compatibility (e.g., switching from mariadb to pymysql due to native dependency issues).",
+      "Configured fine-grained IAM roles to securely grant Lambda access to both S3 objects and RDS resources.",
+      "Gained insights into the performance limitations of Lambda for bulk inserts, necessitating more efficient data handling strategies.",
+      "Gained hands-on experience with building a serverless ETL pipeline using AWS Lambda, S3, and Aurora (RDS).",
+      "Practiced debugging permission errors and understanding AWS error messages (e.g., AccessDenied, Timeout).",
+      "Learned about Lambda Layers and their role in managing dependencies for Python packages.",
+    ],
+  },
 };
