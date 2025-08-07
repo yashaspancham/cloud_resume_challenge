@@ -92,7 +92,7 @@ export const projectsData = {
         link: "https://github.com/yashaspancham/simple-ETL/blob/main/docs/setUp.sql",
       },
       {
-        text: "Initally, I simply took a row from .csv file and inserted it into the DB, but later I created batches and inserted them in batches to improve performance.",
+        text: "Initally, I simply took a row from .csv file and inserted it into the DB, but later I inserted 10 rows at once to improve performance.",
         img: ["/assets/charts/Time&Space.png", "performance mertics"], //first is the image path, second is the alt text
       },
       {
