@@ -23,7 +23,7 @@ const Info = () => {
       x: xValue,
       opacity: 0,
     });
-    // countVisitors();
+    countVisitors();
   }, []);
   return (
     <div className="flex flex-col" ref={infoRef}>
@@ -39,7 +39,7 @@ const Info = () => {
       <button className="self-start ml-5 mt-5 bg-[#191919] hover:bg-[#262626] p-2 xl:p-4 rounded-xl">
         <a
           className=""
-          href="http://www.projectyreflections.com/Yashas's%20Resume.pdf"
+          href="https://drive.google.com/file/d/1-qrKkM7L-ExmNCxVoHsFMe0OTEzGPJcx/view"
           target="_blank"
         >
           My Resume
