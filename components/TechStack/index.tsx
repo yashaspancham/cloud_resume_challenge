@@ -51,6 +51,10 @@ const techLogos = [
   { techName: "CloudFront", src: "/assets/logo/cloudfrontIcon.png", alt: "CloudFront logo" },
   { techName: "IAM", src: "/assets/logo/IAMIcon.jpeg", alt: "IAM logo" },
     { techName: "API Gateway", src: "/assets/logo/APIGatewayIcon.jpeg", alt: "API Gateway logo" },
+    { techName: "Strapi", src: "/assets/logo/strapiLogo.png", alt: "strapi logo" },
+    { techName: "Cursor", src: "/assets/logo/cursorLogo.jpeg", alt: "Cursor logo" },
+    { techName: "Github Copilot", src: "/assets/logo/githubCopilotLogo.jpeg", alt: "Github Copilot logo" },
+    
 
 ];
 
