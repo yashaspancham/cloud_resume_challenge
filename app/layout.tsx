@@ -15,6 +15,40 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Yashas_dev",
   description: "My portfolio website",
+  keywords: [
+    "Yashas",
+    "developer",
+    "portfolio",
+    "Next.js",
+    "React",
+    "Web developer",
+    "javascript",
+    "dev",
+    "front-end",
+    "full-stack",
+    "ts",
+    "js",
+    "node.js",
+    "AWS",
+    "typescript",
+    "yashas-dev",
+  ],
+   openGraph: {
+    title: "Yashas_dev – Portfolio",
+    description: "Explore my projects, skills, and contact information.",
+    url: "https://www.yashas-dev.com",
+    siteName: "Yashas_dev",
+    images: [
+      {
+        url: "/preview.webp",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  }
 };
 
 export default function RootLayout({
