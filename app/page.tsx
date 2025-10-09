@@ -24,11 +24,8 @@ export default function Home() {
         >
           <TechStack />
         </section>
-        <section
-          id="work-experience"
-          className="md:mx-20 md:p-20  md:flex md:my-20"
-        >
-          <WorkExperience />
+        <section id="personal-projects" className="md:mx-20 md:p-20  md:flex md:my-20">
+          <PersonalProjects />
         </section>
         <section
           id="certifications-and-achievements"
@@ -36,12 +33,15 @@ export default function Home() {
         >
           <CertificationsAndAchievements />
         </section>
-        <section id="personal-projects" className="md:mx-20 md:p-20 md:my-20">
-          <PersonalProjects />
+        <section
+          id="work-experience"
+          className="md:mx-20 md:p-20  md:flex md:my-20  md:mx-20 md:p-20 md:my-20"
+        >
+          <WorkExperience />
         </section>
         <section
           id="contact-me"
-          className="md:mx-20 md:p-20   md:flex md:justify-end md:my-20"
+          className="md:flex md:justify-end  md:py-20 md:px-20 md:p-20"
         >
           <ContactMe />
         </section>

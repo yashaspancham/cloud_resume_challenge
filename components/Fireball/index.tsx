@@ -9,12 +9,7 @@ const FireballGroup = dynamic(() => import("@/components/FireballGroup"), {
 const FireBall = () => {
   return (
     <Canvas camera={{ position: [0, 0, 7], fov: 75 }}>
-      <Suspense
-        fallback={
-          null
-          // <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-white ml-[50%]" />
-        }
-      >
+      <Suspense fallback={<div></div>}>
         <FireballGroup />
       </Suspense>
     </Canvas>

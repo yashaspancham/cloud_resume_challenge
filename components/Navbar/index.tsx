@@ -140,7 +140,7 @@ const Navbar = () => {
             <p className="border-b-1 border-white w-10" />
             <p className="border-b-1 border-white w-10" />
             <p className="border-b-1 border-white w-10" />
-            <p className="border-b-1 border-white w-10" />
+            {/* <p className="border-b-1 border-white w-10" /> */}
           </div>
         )}
       </button>
