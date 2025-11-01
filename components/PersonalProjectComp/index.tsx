@@ -2,9 +2,12 @@
 
 import { useSearchParams } from "next/navigation";
 import { projectsData } from "@/projectsData/projectDetails";
+import { IoArrowBack } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 
 const PersonalProjectComp = () => {
   const param = useSearchParams();
+  const router=useRouter();
   let projectName: string | null = param.get("project-name");
   if (projectName === null) {
     projectName = "";
@@ -14,7 +17,12 @@ const PersonalProjectComp = () => {
 
   return (
     <>
-      <div className="text-2xl sm:text-4xl lg:text-8xl">{data?.title}</div>
+      <button 
+        onClick={() => router.replace("/")}
+      className="text-xl lg:text-2xl hover:cursor-pointer bg-[#191919] hover:bg-[#262626] m-2 w-fit p-3 rounded-xl absolute top-2.5 lg:top-5 left-2.5 lg:left-5">
+        <IoArrowBack />
+      </button>
+      <div className="text-2xl sm:text-4xl lg:text-8xl max-xl:mt-10 max-lg:mt-12 max-md:mt-18">{data?.title}</div>
 
       {data?.description && (
         <p className="text-xs sm:text-sm xl:text-md">
@@ -163,10 +171,6 @@ const PersonalProjectComp = () => {
             </ul>
           </div>
         )}
-
-        <button className="text-xl sm:text-2xl lg:text-4xl hover:cursor-pointer bg-[#191919] hover:bg-[#262626] m-5 w-fit p-2 xl:p-4 rounded-xl">
-          <a href="https://www.yashas-dev.com">Return</a>
-        </button>
       </div>
     </>
   );

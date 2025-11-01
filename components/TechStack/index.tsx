@@ -61,8 +61,10 @@ const techLogos = [
 const TechStack = () => {
   const TechStackRef = useRef(null);
 
-  useEffect(() => {
-    const xValue = window.innerWidth < 820 ? 0 : 100;
+useEffect(() => {
+  const xValue = window.innerWidth < 820 ? 0 : 100;
+
+  const ctx = gsap.context(() => {
     gsap.from(TechStackRef.current, {
       scrollTrigger: {
         trigger: TechStackRef.current,
@@ -74,7 +76,10 @@ const TechStack = () => {
       x: xValue,
       opacity: 0,
     });
-  }, []);
+  });
+
+  return () => ctx.revert();
+}, []);
 
   return (
     <div
@@ -82,7 +87,7 @@ const TechStack = () => {
       ref={TechStackRef}
     >
       <p className="text-3xl md:text-4xl">Tech Stack</p>
-      <div className="flex gap-5 mt-7 flex-wrap">
+      <div className="flex gap-5 mt-7 flex-wrap max-lg:justify-center">
         {techLogos.map((logo, idx) => (
           <div
             key={idx}

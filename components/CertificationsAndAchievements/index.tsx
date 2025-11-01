@@ -7,18 +7,21 @@ const CertificationsAndAchievements = () => {
   let timeline = gsap.timeline();
   const CertificationsAndAchievementsRef = useRef(null);
   useEffect(() => {
-        const xValue = window.innerWidth < 820 ? 0 : 100;
-    timeline.from(CertificationsAndAchievementsRef.current, {
-      scrollTrigger: {
-        trigger: CertificationsAndAchievementsRef.current,
-        start: "top center",
-        end: "+=200",
-        toggleActions: "play pause reverse reset",
-        scrub: true,
-      },
-      x: xValue,
-      opacity: 0,
+    const gastContext = gsap.context(() => {
+      const xValue = window.innerWidth < 820 ? 0 : 100;
+      timeline.from(CertificationsAndAchievementsRef.current, {
+        scrollTrigger: {
+          trigger: CertificationsAndAchievementsRef.current,
+          start: "top center",
+          end: "+=200",
+          toggleActions: "play pause reverse reset",
+          scrub: true,
+        },
+        x: xValue,
+        opacity: 0,
+      });
     });
+    return () => gastContext.revert();
   }, []);
   return (
     <div ref={CertificationsAndAchievementsRef} className="w-full xl:w-[50%]">
@@ -37,7 +40,7 @@ const CertificationsAndAchievements = () => {
             AWS Certified Solutions Architect - Associate
           </div>
           <p>ID- e50500b14f934279bf01c73e5e6ab1a7</p>
-          <p>Jan 2025 - Jan 2028</p>
+          <p>Jan 2025 - Jan 20 28</p>
         </div>
       </div>
 
