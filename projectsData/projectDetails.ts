@@ -1,7 +1,7 @@
 export const projectsData = {
   reflections: {
     title: "Reflections",
-    Website: "https://www.projectyreflections.com",
+    // Website: "https://www.projectyreflections.com",
     githubFrontEnd: "https://github.com/yashaspancham/project_y_app",
     githubbackEnd: "https://github.com/yashaspancham/project_y_backend",
     architectureimage: "/DrawIO/Reflections.drawio.png",

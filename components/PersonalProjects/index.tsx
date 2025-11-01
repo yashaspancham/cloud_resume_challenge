@@ -10,9 +10,11 @@ const PersonalProjects = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const xValue = window.innerWidth < 820 ? 0 : -100;
-    timeline.from(PersonalProjectsRef.current, {
-      scrollTrigger: {
+    const context=gsap.context(() => {
+
+      const xValue = window.innerWidth < 820 ? 0 : -100;
+      timeline.from(PersonalProjectsRef.current, {
+        scrollTrigger: {
         trigger: PersonalProjectsRef.current,
         start: "top center",
         end: "+=100",
@@ -22,6 +24,8 @@ const PersonalProjects = () => {
       x: xValue,
       opacity: 0,
     });
+  });
+  return () => context.revert();
   }, []);
 
   const projects = [
@@ -46,25 +50,27 @@ const PersonalProjects = () => {
   ];
 
   return (
-    <div
-      className="flex gap-7 flex-col w-full xl:w-[50%]"
-      ref={PersonalProjectsRef}
-    >
-      <p className="text-4xl">Personal Projects</p>
+    <div className="w-full xl:w-[50%]">
+      <div
+        className="flex gap-7 flex-col"
+        ref={PersonalProjectsRef}
+      >
+        <p className="text-4xl">Personal Projects</p>
 
-      <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center">
-        {projects.map((item, index) => (
-          <div
-            className="w-46 h-[250px] flex flex-col gap-3  p-5 rounded-xl hover:shadow-[-1px_1px_5px_0px_rgba(255,255,255,0.75)] hover:cursor-pointer border-[0.5px] border-[#1a1a1a]"
-            key={index}
-            onClick={() =>
-              router.push(`/project-details?project-name=${item.name}`)
-            }
-          >
-            <p className="text-2xl">{item.title}</p>
-            <p className="text-sm">{item.description}</p>
-          </div>
-        ))}
+        <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center">
+          {projects.map((item, index) => (
+            <div
+              className="w-46 h-[250px] flex flex-col gap-3  p-5 rounded-xl hover:shadow-[-1px_1px_5px_0px_rgba(255,255,255,0.75)] hover:cursor-pointer border-[0.5px] border-[#1a1a1a]"
+              key={index}
+              onClick={() =>
+                router.push(`/project-details?project-name=${item.name}`)
+              }
+            >
+              <p className="text-2xl">{item.title}</p>
+              <p className="text-sm">{item.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

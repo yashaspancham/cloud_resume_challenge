@@ -13,7 +13,7 @@ const Navbar = () => {
   const navOption1Ref3 = useRef(null);
   const navOption1Ref4 = useRef(null);
   const navOption1Ref5 = useRef(null);
-  const pathname = usePathname()
+  const pathname = usePathname();
   let timeline = gsap.timeline();
 
   const handleBurgerClick = () => {
@@ -57,94 +57,91 @@ const Navbar = () => {
       duration: 1.5,
       ease: "elastic.out",
     });
-    if(pathname==="/"){
+    if (pathname === "/") {
       setVisibility(true);
     }
   }, [loaded]);
 
-  return (visibility &&
-    <div
-      className={`flex bg-black text-white  w-full p-1 sm:px-3 md:px-5 md:px-20 justify-between pt-10 ${
-        navPageBool
-          ? "bg-[black] top-0 absolute z-1 h-full"
-          : "h-20 items-start"
-      }`}
-    >
-      <div className="bg-gradient-to-r from-blue-500 to-red-500 bg-clip-text text-transparent w-fit text-2xl mt-1">
-        Yashas
-      </div>
-      {loaded && (
-        <div
-          onClick={() => {
-            document.body.style.overflow = "";
-            setNavPageBool(false);
-          }}
-          className={`flex gap-10 text-white w-fit text-xl  ${
-            navPageBool ? "flex-col justify-center" : "max-xl:hidden"
-          }`}
-        >
-          <div ref={navOption1Ref1}>
-            <a
-              href="#hi"
-              className="xl:hover:text-[#fe0100]"
-            >
-              Hi
-            </a>
-          </div>
-          <div ref={navOption1Ref1}>
-            <a
-              href="#tech-stack"
-              className="xl:hover:text-[#ff6900]"
-            >
-              Tech Stack
-            </a>
-          </div>
-          <div ref={navOption1Ref2}>
-            <a href="#work-experience" className="xl:hover:text-[#f4fe6c]">
-              Work Experience
-            </a>
-          </div>
-          <div ref={navOption1Ref3}>
-            <a
-              href="#certifications-and-achievements"
-              className="xl:hover:text-[#f3ff4d]"
-            >
-              Certifications And Achievements
-            </a>
-          </div>
-          <div ref={navOption1Ref4}>
-            <a href="#personal-projects"
-            className="xl:hover:text-[#9700ff]"
-            >Personal Projects</a>
-          </div>
-          <div ref={navOption1Ref5}>
-            <a href="#contact-me"
-            className="xl:hover:text-[#5f00ff]"
-            >Contact Me</a>
-          </div>
-        </div>
-      )}
-      <button
-        className="flex flex-col gap-2 cursor-pointer xl:hidden"
-        onClick={() => {
-          handleBurgerClick();
-        }}
+  return (
+    visibility && (
+      <div
+        className={`flex bg-black text-white  w-full p-1 sm:px-3 md:px-5 md:px-20 justify-between pt-10 ${
+          navPageBool
+            ? "bg-[black] top-0 absolute z-3 h-full"
+            : "h-20 items-start"
+        }`}
       >
-        {navPageBool ? (
-          <div className="">
-            <p className="rotate-45 border-b-1 border-white w-10" />
-            <p className="rotate-135 border-b-1 border-white w-10" />
-          </div>
-        ) : (
-          <div className="flex flex-col gap-2">
-            <p className="border-b-1 border-white w-10" />
-            <p className="border-b-1 border-white w-10" />
-            <p className="border-b-1 border-white w-10" />
-            <p className="border-b-1 border-white w-10" />
+        <div className="bg-gradient-to-r from-blue-500 to-red-500 bg-clip-text text-transparent w-fit text-2xl mt-1">
+          Yashas
+        </div>
+        {loaded && (
+          <div
+            onClick={() => {
+              document.body.style.overflow = "";
+              setNavPageBool(false);
+            }}
+            className={`flex gap-10 text-white w-fit text-xl  ${
+              navPageBool ? "flex-col justify-center" : "max-xl:hidden"
+            }`}
+          >
+            <div ref={navOption1Ref1}>
+              <a href="#hi" className="xl:hover:text-[#fe0100]">
+                Hi
+              </a>
+            </div>
+            <div ref={navOption1Ref1}>
+              <a href="#tech-stack" className="xl:hover:text-[#ff6900]">
+                Tech Stack
+              </a>
+            </div>
+            <div ref={navOption1Ref2}>
+              <a href="#personal-projects" className="xl:hover:text-[#f4fe6c]">
+                Personal Projects
+              </a>
+            </div>            
+            <div ref={navOption1Ref3}>
+              <a
+                href="#certifications-and-achievements"
+                className="xl:hover:text-[#f3ff4d]"
+              >
+                Certifications And Achievements
+              </a>
+            </div>
+            <div ref={navOption1Ref4}>
+              <a href="#work-experience" className="xl:hover:text-[#9700ff]">
+                Work Experience
+              </a>
+            </div>
+
+            <div ref={navOption1Ref5}>
+              <a href="#contact-me" className="xl:hover:text-[#5f00ff]">
+                Contact Me
+              </a>
+            </div>
           </div>
         )}
-      </button>
-    </div>
+        <button
+          className="flex flex-col gap-2 cursor-pointer xl:hidden"
+          onClick={() => {
+            handleBurgerClick();
+          }}
+        >
+          {navPageBool ? (
+            <div className="">
+              <p className="rotate-45 border-b-1 border-white w-10" />
+              <p className="rotate-135 border-b-1 border-white w-10" />
+            </div>
+          ) : (
+            <div className="flex flex-col gap-2">
+              <p className="border-b-1 border-white w-10" />
+              <p className="border-b-1 border-white w-10" />
+              <p className="border-b-1 border-white w-10" />
+              {/* <p className="border-b-1 border-white w-10" /> */}
+            </div>
+          )}
+        </button>
+      </div>
+    )
   );
 };
 

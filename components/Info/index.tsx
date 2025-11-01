@@ -31,7 +31,7 @@ const Info = () => {
         <p className="">Hi!!!, I am </p>
         <p className="xl:text-[150px] text-5xl">Yashas</p>
         <p className="xl:w-1/2 text-wrap">
-          A Software Engineer focused on building scalable web, mobile,cloud
+          A Software Engineer focused on building scalable web and cloud
           systems. Skilled in full-stack development and cloud Systems.
         </p>
       </div>

@@ -7,18 +7,21 @@ const WorkExperience = () => {
   let timeline = gsap.timeline();
   const WorkExperienceRef = useRef(null);
   useEffect(() => {
-    const xValue = window.innerWidth < 820 ? 0 : -100;
-    timeline.from(WorkExperienceRef.current, {
-      scrollTrigger: {
-        trigger: WorkExperienceRef.current,
-        start: "top center",
-        end: "+=200",
-        toggleActions: "play pause reverse reset",
-        scrub: true,
-      },
-      x: xValue,
-      opacity: 0,
+    const gaspCtontext = gsap.context(() => {
+      const xValue = window.innerWidth < 820 ? 0 : -100;
+      timeline.from(WorkExperienceRef.current, {
+        scrollTrigger: {
+          trigger: WorkExperienceRef.current,
+          start: "top center",
+          end: "+=200",
+          toggleActions: "play pause reverse reset",
+          scrub: true,
+        },
+        x: xValue,
+        opacity: 0,
+      });
     });
+    return () => gaspCtontext.revert();
   }, []);
   return (
     <div className="flex gap-7 flex-col" ref={WorkExperienceRef}>
@@ -30,36 +33,43 @@ const WorkExperience = () => {
           <p className="text-sm">June 2024-March 2025 @Codezyng </p>
           <ul className="list-disc marker:text-white ml-5 xl:w-[50%] text-md md:text-lg">
             <li className=" wrap">
-              Implemented responsive, scalable, and optimized web apps for
-              business websites across various domains like healthcare, IT, and
-              e-commerce using <span className="text-[#f4fe6c]">Next.js</span>,{" "}
-              <span className="text-[#f4fe6c]">Angular</span>, and{" "}
-              <span className="text-[#f4fe6c]">Firebase</span>.
+              Achieved a 15% increase in organic traffic by enhancing website
+              <span className="text-[#f4fe6c]"> SEO</span> strategies in
+              collaboration with business analysts, improving visibility and
+              search engine rankings.
             </li>
             <li className=" wrap">
-              Built e-commerce websites and dashboards with scalable, reusable
-              components, enhancing maintainability, performance, and
-              development speed by 20%.
+              Achieved a 20% improvement in maintainability, performance, and
+              development speed by writing{" "}
+              <span className="text-[#f4fe6c]">clean, reusable code</span> and
+              leveraging AI tools like{" "}
+              <span className="text-[#f4fe6c]">Cursor and GitHub Copilot</span>.
             </li>
             <li className=" wrap">
-              Collaborated with designers, backend teams, and customers to
-              ensure seamless integration of{" "}
-              <span className="text-[#f4fe6c]">RESTful APIs</span>, aligning
-              with business needs and delivering user-friendly interfaces.
+              Implemented, scalable, responsive and optimized business websites,
+              landing pages, e-commerce websites and dashboards{" "}
+            </li>
+            <li>
+              Collaborated with designers and users to deliver exactly what the
+              client wanted, ensuring user-friendly interfaces and meeting
+              business requirements.
+            </li>
+            <li className="wrap">
+              Demonstrated accelerated project approvals and feasibility by
+              developing multiple Proof of Concepts (POCs) and Minimum Viable
+              Products (MVPs) for potential clients, leveraging AI tools like{" "}
+              <span className="text-[#f4fe6c]">Cursor</span> and{" "}
+              <span className="text-[#f4fe6c]">Lovable</span>.
             </li>
             <li className=" wrap">
-              Enhanced website <span className="text-[#f4fe6c]">SEO</span>{" "}
-              strategies with business analysts, improving visibility and search
-              engine rankings, leading to a 15% increase in organic traffic.
-            </li>
-            <li className=" wrap">
-              Leveraged technologies like{" "}
+              Used technologies like{" "}
+              <span className="text-[#f4fe6c]">Axios</span>,{" "}
               <span className="text-[#f4fe6c]">Redux</span>,{" "}
               <span className="text-[#f4fe6c]">Material UI</span>,{" "}
-              <span className="text-[#f4fe6c]">Tailwind CSS</span>,
-              <span className="text-[#f4fe6c]">Azure Blob Storage</span>, and{" "}
-              <span className="text-[#f4fe6c]">Strapi</span> for efficient
-              frontend development.
+              <span className="text-[#f4fe6c]">Tailwind CSS</span>,{" "}
+              <span className="text-[#f4fe6c]">Azure Blob Storage</span>,{" "}
+              <span className="text-[#f4fe6c]">Ghost CMS</span>, and{" "}
+              <span className="text-[#f4fe6c]">Strapi</span> for development.
             </li>
           </ul>
         </div>
