@@ -1,0 +1,28 @@
+That's the smart way to do it—saving the specs so you can keep everything consistent!
+
+Here are the precise specifications used to generate the set of dark-theme, minimalist thumbnails:
+
+---
+
+## 🎨 Minimalist Dark Theme Thumbnail Specs
+
+| Specification | Value | Rationale |
+| :--- | :--- | :--- |
+| **Aspect Ratio** | 16:9 or 1:1 (Square) | Standard thumbnail sizes for portfolios and grids. (E.g., $1280 \times 720$ or $1000 \times 1000$ pixels). |
+| **Background Color** | Deep Charcoal Gray | **Hex Code: `#1E1E1E`** | Dark but not pure black; minimizes eye strain and is common in professional dark mode UIs. |
+| **Icon Color** | Grayish-White / Dull Accent | **Hex Code: `#CCCCCC`** | A soft, desaturated white that provides contrast against the background without being overly harsh or glowing. |
+| **Icon Style** | Monoline / Minimalist | Simple, bold line art or filled shapes; avoids complex gradients or shadows. |
+| **Icon Placement** | Centered | Ensures visibility and works well whether the final aspect ratio is a wide rectangle or a square. |
+
+### Summary of the Icons Generated
+
+| Project Type | Icon Concept |
+| :--- | :--- |
+| **Personal Project (General)** | Code Brackets / **`</>`** |
+| **ETL Pipeline** | Funnel and Arrows (Flow Diagram) |
+| **Portfolio Website** | Minimalist Browser Window |
+| **Diary Web App** | Open Notebook/Journal |
+
+By using the **`#1E1E1E`** background and the **`#CCCCCC`** icon color, you can ensure any new thumbnail you create will match this clean, consistent dark aesthetic.
+
+Do you need the specs for any other project-specific icons, or are you ready to move on?
