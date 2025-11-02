@@ -106,7 +106,7 @@ const PersonalProjects = () => {
                     onClick={() =>
                       router.push(`/project-details?project-name=${item.name}`)
                     }
-                    className="bg-sky-500 py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer"
+                    className="bg-[#b5c13c] py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer"
                   >
                     <FaExternalLinkAlt />
                     <p>Docs</p>
