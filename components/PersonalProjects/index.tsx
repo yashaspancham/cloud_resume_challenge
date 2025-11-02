@@ -54,7 +54,7 @@ const PersonalProjects = () => {
       name: "simple-ETL",
       description:
         "Data from .csv in S3 to a Database in RDS, using AWS Lambda and Python.",
-      techStack: ["Python", "AWS Lambda", "AWS S3", "AWS RDS"],
+      techStack: ["Python", "AWS S3", "AWS Lambda", "AWS RDS"],
       github: "https://github.com/yashaspancham/simple-ETL",
     },
   ];
@@ -92,14 +92,16 @@ const PersonalProjects = () => {
                   ))}
                 </div>
                 <div className="w-[270px] flex gap-2 justify-center">
-                  <button className="bg-neutral-900 py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer">
-                    <img
-                      src={"/assets/logo/githubWhite.png"}
-                      alt="github white logo"
-                      className="h-5"
-                    />
-                    <a href={item.github} target="_blank">Code</a>
-                  </button>
+                  <a href={item.github} target="_blank">
+                    <button className="bg-neutral-900 py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer">
+                      <img
+                        src={"/assets/logo/githubWhite.png"}
+                        alt="github white logo"
+                        className="h-5"
+                      />
+                      <p>Code</p>
+                    </button>
+                  </a>
                   <button
                     onClick={() =>
                       router.push(`/project-details?project-name=${item.name}`)

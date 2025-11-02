@@ -34,16 +34,16 @@ const WorkExperience = () => {
           <ul className="list-disc marker:text-white ml-5 xl:w-[50%] text-md md:text-lg">
             <li className=" wrap">
               Achieved a 15% increase in organic traffic by enhancing website
-              <span className="text-[#f4fe6c]"> SEO</span> strategies in
+              <span className="text-[#9700ff]"> SEO</span> strategies in
               collaboration with business analysts, improving visibility and
               search engine rankings.
             </li>
             <li className=" wrap">
               Achieved a 20% improvement in maintainability, performance, and
               development speed by writing{" "}
-              <span className="text-[#f4fe6c]">clean, reusable code</span> and
+              <span className="text-[#9700ff]">clean, reusable code</span> and
               leveraging AI tools like{" "}
-              <span className="text-[#f4fe6c]">Cursor and GitHub Copilot</span>.
+              <span className="text-[#9700ff]">Cursor and GitHub Copilot</span>.
             </li>
             <li className=" wrap">
               Implemented, scalable, responsive and optimized business websites,
@@ -58,18 +58,18 @@ const WorkExperience = () => {
               Demonstrated accelerated project approvals and feasibility by
               developing multiple Proof of Concepts (POCs) and Minimum Viable
               Products (MVPs) for potential clients, leveraging AI tools like{" "}
-              <span className="text-[#f4fe6c]">Cursor</span> and{" "}
-              <span className="text-[#f4fe6c]">Lovable</span>.
+              <span className="text-[#9700ff]">Cursor</span> and{" "}
+              <span className="text-[#9700ff]">Lovable</span>.
             </li>
             <li className=" wrap">
               Used technologies like{" "}
-              <span className="text-[#f4fe6c]">Axios</span>,{" "}
-              <span className="text-[#f4fe6c]">Redux</span>,{" "}
-              <span className="text-[#f4fe6c]">Material UI</span>,{" "}
-              <span className="text-[#f4fe6c]">Tailwind CSS</span>,{" "}
-              <span className="text-[#f4fe6c]">Azure Blob Storage</span>,{" "}
-              <span className="text-[#f4fe6c]">Ghost CMS</span>, and{" "}
-              <span className="text-[#f4fe6c]">Strapi</span> for development.
+              <span className="text-[#9700ff]">Axios</span>,{" "}
+              <span className="text-[#9700ff]">Redux</span>,{" "}
+              <span className="text-[#9700ff]">Material UI</span>,{" "}
+              <span className="text-[#9700ff]">Tailwind CSS</span>,{" "}
+              <span className="text-[#9700ff]">Azure Blob Storage</span>,{" "}
+              <span className="text-[#9700ff]">Ghost CMS</span>, and{" "}
+              <span className="text-[#9700ff]">Strapi</span> for development.
             </li>
           </ul>
         </div>
@@ -83,7 +83,7 @@ const WorkExperience = () => {
           <ul className="list-disc marker:text-white ml-5 xl:w-[50%] text-md md:text-lg">
             <li className=" wrap">
               Contributed to the development of a comprehensive{" "}
-              <span className="text-[#f4fe6c]">CRM</span> solution for a gym
+              <span className="text-[#9700ff]">CRM</span> solution for a gym
               management system, collaborating closely with designers and
               backend engineers to deliver an intuitive and user-centric
               experience.
