@@ -26,8 +26,33 @@ const CertificationsAndAchievements = () => {
   return (
     <div ref={CertificationsAndAchievementsRef} className="w-full xl:w-[50%]">
       <div className="text-3xl md:text-4xl">
-        Certifications And Achievements
+        Certifications and Achievements
       </div>
+
+
+      {/* <div className="bg-[#111111] p-5 rounded-lg w-[400px]">
+        <div className="flex justify-between items-center">
+          <img
+            src="/assets/logo/saa-badge.png"
+            alt="AWS Solutions Architect logo"
+            className="h-12"
+          />
+          <p className="text-sm">Certifications</p>
+        </div>
+
+        <div>
+        <p className="text-lg md:text-2xl break-words">
+          AWS Certified Solutions Architect - Associate
+        </p>
+        <p className="text-sm">Amazon Web Servies</p>
+        </div>
+
+        <div>
+          <p className="text-sm">ID:e50500b14f934279bf01c73e5e6ab1a7</p>
+          <p>Jan 2025 - Jan 2028</p>
+        </div>
+      </div> */}
+
 
       <div className="flex flex-col lg:flex-row gap-5 mt-7 lg:items-center">
         <img
@@ -40,7 +65,7 @@ const CertificationsAndAchievements = () => {
             AWS Certified Solutions Architect - Associate
           </div>
           <p>ID- e50500b14f934279bf01c73e5e6ab1a7</p>
-          <p>Jan 2025 - Jan 20 28</p>
+          <p>Jan 2025 - Jan 2028</p>
         </div>
       </div>
 

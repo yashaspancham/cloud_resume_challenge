@@ -46,10 +46,13 @@ export default function Home() {
         >
           <ContactMe />
         </section>
-        <section
-          className="h-[500px] w-full flex justify-center items-center text-md relative z-10"
-        >
-          <p>Thank you for you time and consideration!</p>
+        <section className="h-[500px] w-full flex justify-center items-center text-md relative z-10 flex flex-col gap-5">
+          <p>Thank you for your time and consideration!</p>
+          <a href="#top"
+            className="bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700"
+          >
+            ↑ Top
+          </a>
         </section>
       </main>
     </>

@@ -54,7 +54,7 @@ const FireBall = () => {
 
       {isVisible && (
         <div className="lg:text-9xl md:text-8xl sm:text-7xl text-5xl -skew-x-10 text-gray-200 italic fixed z-2 mb-5">
-          Lets build it
+          Let's build it
         </div>
       )}
     </section>
