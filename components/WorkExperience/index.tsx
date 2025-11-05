@@ -46,8 +46,8 @@ const WorkExperience = () => {
               <b>Cursor and GitHub Copilot</b>.
             </li>
             <li className=" wrap">
-              Implemented, scalable, responsive and optimized business websites,
-              landing pages, e-commerce websites and dashboards{" "}
+              Implemented scalable, responsive and optimized business websites,
+              landing pages, e-commerce websites and dashboards.{" "}
             </li>
             <li>
               Collaborated with designers and users to deliver exactly what the
