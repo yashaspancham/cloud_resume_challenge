@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import ContactMeButton from "../ContactMeButton";
+
 
 const WorkExperience = () => {
   let timeline = gsap.timeline();
@@ -91,6 +93,7 @@ const WorkExperience = () => {
           </ul>
         </div>
       </div>
+      <ContactMeButton extraCSS="w-fit"/>
     </div>
   );
 };

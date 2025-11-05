@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import ContactMeButton from "../ContactMeButton";
 
 const CertificationsAndAchievements = () => {
   let timeline = gsap.timeline();
@@ -24,7 +25,7 @@ const CertificationsAndAchievements = () => {
     return () => gastContext.revert();
   }, []);
   return (
-    <div ref={CertificationsAndAchievementsRef} className="w-full xl:w-[50%]">
+    <div ref={CertificationsAndAchievementsRef} className="w-full xl:w-[50%] flex flex-col">
       <div className="text-3xl md:text-4xl">
         Certifications and Achievements
       </div>
@@ -100,6 +101,7 @@ const CertificationsAndAchievements = () => {
           <p>Issued on: July 2024</p>
         </div>
       </div>
+      <ContactMeButton extraCSS="w-fit h-fit lg:ml-1 mt-5 block"/>
     </div>
   );
 };

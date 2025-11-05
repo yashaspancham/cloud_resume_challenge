@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import gsap from "gsap";
+import ContactMeButton from "../ContactMeButton";
 
 const PersonalProjects = () => {
   let timeline = gsap.timeline();
@@ -116,6 +117,7 @@ const PersonalProjects = () => {
             </div>
           ))}
         </div>
+      <ContactMeButton extraCSS="w-fit h-fit mt-5" />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 import { useEffect, useState, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import dynamic from "next/dynamic";
+import ContactMeButton from "../ContactMeButton";
 
 const FireballGroup = dynamic(() => import("@/components/FireballGroup"), {
   ssr: false,
@@ -31,7 +32,7 @@ const FireBall = () => {
         setCameraPosition([0, 0, 7]);
       }
     };
-    
+
     handleResize();
     window.addEventListener("resize", handleResize);
 
@@ -55,6 +56,27 @@ const FireBall = () => {
       {isVisible && (
         <div className="lg:text-9xl md:text-8xl sm:text-7xl text-5xl -skew-x-10 text-gray-200 italic fixed z-2 mb-5">
           Let's build it
+          <div className="flex flex-wrap gap-4 text-lg text-white mt-3 justify-center">
+            <ContactMeButton />
+            <a
+              href="#personal-projects"
+              className="not-italic skew-x-0 text-white bg-[#919a30] hover:bg-[#9aa433] p-3 rounded-lg hover:cursor-pointer"
+            >
+              Projects
+            </a>
+            <a
+              href="#certifications-and-achievements"
+              className="max-md:hidden not-italic skew-x-0 text-white bg-[#767d27] hover:bg-[#919a30] p-3 rounded-lg hover:cursor-pointer"
+            >
+              Certifications
+            </a>
+            <a
+              href="#work-experience"
+              className="max-md:hidden not-italic skew-x-0 text-white bg-[#8f00f2] hover:bg-[#9700ff] p-3 rounded-lg hover:cursor-pointer"
+            >
+              Experience
+            </a>
+          </div>
         </div>
       )}
     </section>
