@@ -28,11 +28,11 @@ const Info = () => {
   return (
     <div className="flex flex-col" ref={infoRef}>
       <div className="xl:text-4xl text-xl">
-        <p className="">Hi!!!, I am </p>
+        <p className="">Hi! I am </p>
         <p className="xl:text-[150px] text-5xl">Yashas</p>
         <p className="xl:w-1/2 text-wrap">
           A Software Engineer focused on building web and cloud
-          systems. Skilled in full-stack development and cloud Systems.
+          systems. Skilled in full-stack development and cloud systems.
         </p>
       </div>
       <Contacts />
