@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { countVisitors } from "@/API";
+import ContactMeButton from "../ContactMeButton";
 
 const Info = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -31,20 +32,23 @@ const Info = () => {
         <p className="">Hi! I am </p>
         <p className="xl:text-[150px] text-5xl">Yashas</p>
         <p className="xl:w-1/2 text-wrap">
-          A Software Engineer focused on building web and cloud
-          systems. Skilled in full-stack development and cloud systems.
+          A Software Engineer focused on building web and cloud systems. Skilled
+          in full-stack development and cloud systems.
         </p>
       </div>
       <Contacts />
-      <button className="self-start ml-5 mt-5 bg-[#191919] hover:bg-[#262626] p-2 xl:p-4 rounded-xl">
-        <a
-          className=""
-          href="https://drive.google.com/file/d/1-qrKkM7L-ExmNCxVoHsFMe0OTEzGPJcx/view"
-          target="_blank"
-        >
-          My Resume
-        </a>
-      </button>
+      <div className="flex gap-2 items-center mt-4">
+        <button className="self-start  bg-[#191919] hover:bg-[#262626] p-2 xl:p-3 rounded-xl">
+          <a
+            className=""
+            href="https://drive.google.com/file/d/1-qrKkM7L-ExmNCxVoHsFMe0OTEzGPJcx/view"
+            target="_blank"
+          >
+            My Resume
+          </a>
+        </button>
+        <ContactMeButton />
+      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import ContactMeButton from "../ContactMeButton";
 
 const CertificationsAndAchievements = () => {
   let timeline = gsap.timeline();
@@ -24,35 +25,33 @@ const CertificationsAndAchievements = () => {
     return () => gastContext.revert();
   }, []);
   return (
-    <div ref={CertificationsAndAchievementsRef} className="w-full xl:w-[50%]">
+    <div ref={CertificationsAndAchievementsRef} className="w-full xl:w-[50%] flex flex-col">
       <div className="text-3xl md:text-4xl">
         Certifications and Achievements
       </div>
 
-
-      {/* <div className="bg-[#111111] p-5 rounded-lg w-[400px]">
-        <div className="flex justify-between items-center">
-          <img
-            src="/assets/logo/saa-badge.png"
-            alt="AWS Solutions Architect logo"
-            className="h-12"
-          />
-          <p className="text-sm">Certifications</p>
-        </div>
-
+      {/* <div className="bg-[#111111] p-5 rounded-lg w-fit flex">
+        <img
+          src="/assets/logo/saa-badge.png"
+          alt="AWS Solutions Architect logo"
+          className="h-30"
+        />
+        <p className="text-sm">Certifications</p> 
         <div>
-        <p className="text-lg md:text-2xl break-words">
-          AWS Certified Solutions Architect - Associate
-        </p>
-        <p className="text-sm">Amazon Web Servies</p>
-        </div>
+          <div className="w-[300px]">
+            <p className="text-lg md:text-2xl break-words">
+              AWS Certified Solutions Architect - Associate
+            </p>
+            <p className="text-sm">Amazon Web Servies</p>
+          </div>
 
-        <div>
-          <p className="text-sm">ID:e50500b14f934279bf01c73e5e6ab1a7</p>
-          <p>Jan 2025 - Jan 2028</p>
+          <div>
+            <p className="text-sm text-sm">ID:e50500b14f934279bf01c73e5e6ab1a7</p>
+            <p>Issued on: Jan 2025</p>
+            <p>Expires on: Jan 2028</p>
+          </div>
         </div>
       </div> */}
-
 
       <div className="flex flex-col lg:flex-row gap-5 mt-7 lg:items-center">
         <img
@@ -65,7 +64,8 @@ const CertificationsAndAchievements = () => {
             AWS Certified Solutions Architect - Associate
           </div>
           <p>ID- e50500b14f934279bf01c73e5e6ab1a7</p>
-          <p>Jan 2025 - Jan 2028</p>
+          <p>Issued on: Jan 2025</p>
+          <p>Expires on: Jan 2028</p>
         </div>
       </div>
 
@@ -80,7 +80,8 @@ const CertificationsAndAchievements = () => {
             AWS Certified Cloud Practitioner
           </p>
           <p>ID- 7c943f8205004c48a30a69ef022d5011</p>
-          <p>Aug 2024 - Jan 2028</p>
+          <p>Issued on: Aug 2024</p>
+          <p>Expires on: Jan 2028</p>
         </div>
       </div>
 
@@ -97,9 +98,10 @@ const CertificationsAndAchievements = () => {
             Bachelor of Engineering in Information Science And Technology
           </div>
           <p>from N.M.A.M. Institute Of Technology</p>
-          <p>Oct 2020 - July 2024</p>
+          <p>Issued on: July 2024</p>
         </div>
       </div>
+      <ContactMeButton extraCSS="w-fit h-fit lg:ml-1 mt-5 block"/>
     </div>
   );
 };

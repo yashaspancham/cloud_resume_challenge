@@ -28,8 +28,7 @@ const ContactMe = () => {
     <div ref={ContactMeRef} className="w-fit">
       <h2 className="text-4xl font-bold">Contact Me</h2>
       <p className="text-lg md:mt-7 wrap">
-        If you have any questions or would like to get in touch, feel free to
-        reach out!
+        Have a project or opportunity in mind? Let’s connect, I’m open to work!
       </p>
       <div className="text-lg mt-2">
         <p>📞 +91 8073980836</p>

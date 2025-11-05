@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import ContactMeButton from "../ContactMeButton";
 
 const techLogos = [
   { techName: "Next.js", src: "/assets/logo/nextjs.png", alt: "nextjs logo" },
@@ -46,40 +47,66 @@ const techLogos = [
   { techName: "Linux", src: "/assets/logo/tux.png", alt: "linux logo" },
   { techName: "NGINX", src: "/assets/logo/nginx.png", alt: "nginx logo" },
   { techName: "Github", src: "/assets/logo/github.png", alt: "github logo" },
-  { techName: "Lambda", src: "/assets/logo/lambdaIcon.png", alt: "Lambda logo" },
-  { techName: "DynamoDB", src: "/assets/logo/dynamoDBIcon.jpeg", alt: "DynamoDB logo" },
-  { techName: "CloudFront", src: "/assets/logo/cloudfrontIcon.png", alt: "CloudFront logo" },
+  {
+    techName: "Lambda",
+    src: "/assets/logo/lambdaIcon.png",
+    alt: "Lambda logo",
+  },
+  {
+    techName: "DynamoDB",
+    src: "/assets/logo/dynamoDBIcon.jpeg",
+    alt: "DynamoDB logo",
+  },
+  {
+    techName: "CloudFront",
+    src: "/assets/logo/cloudfrontIcon.png",
+    alt: "CloudFront logo",
+  },
   { techName: "IAM", src: "/assets/logo/IAMIcon.jpeg", alt: "IAM logo" },
-    { techName: "API Gateway", src: "/assets/logo/APIGatewayIcon.jpeg", alt: "API Gateway logo" },
-    { techName: "Strapi", src: "/assets/logo/strapiLogo.png", alt: "strapi logo" },
-    { techName: "Cursor", src: "/assets/logo/cursorLogo.jpeg", alt: "Cursor logo" },
-    { techName: "Github Copilot", src: "/assets/logo/githubCopilotLogo.jpeg", alt: "Github Copilot logo" },
-    
-
+  {
+    techName: "API Gateway",
+    src: "/assets/logo/APIGatewayIcon.jpeg",
+    alt: "API Gateway logo",
+  },
+  {
+    techName: "Strapi",
+    src: "/assets/logo/strapiLogo.png",
+    alt: "strapi logo",
+  },
+  {
+    techName: "Cursor",
+    src: "/assets/logo/cursorLogo.jpeg",
+    alt: "Cursor logo",
+  },
+  {
+    techName: "Github Copilot",
+    src: "/assets/logo/githubCopilotLogo.jpeg",
+    alt: "Github Copilot logo",
+  },
 ];
 
 const TechStack = () => {
   const TechStackRef = useRef(null);
 
-useEffect(() => {
-  const xValue = window.innerWidth < 820 ? 0 : 100;
+  useEffect(() => {
+    const xValue = window.innerWidth < 820 ? 0 : 100;
 
-  const ctx = gsap.context(() => {
-    gsap.from(TechStackRef.current, {
-      scrollTrigger: {
-        trigger: TechStackRef.current,
-        start: "top center",
-        end: "+=200",
-        toggleActions: "play pause reverse reset",
-        scrub: 1,
-      },
-      x: xValue,
-      opacity: 0,
+    const ctx = gsap.context(() => {
+      gsap.from(TechStackRef.current, {
+        scrollTrigger: {
+          trigger: TechStackRef.current,
+          start: "top center",
+          end: "+=200",
+          toggleActions: "play pause reverse reset",
+          scrub: 1,
+        },
+        x: xValue,
+        opacity: 0,
+      });
     });
-  });
 
-  return () => ctx.revert();
-}, []);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <div
@@ -105,6 +132,7 @@ useEffect(() => {
           </div>
         ))}
       </div>
+      <ContactMeButton extraCSS="w-fit mt-5" />
     </div>
   );
 };
