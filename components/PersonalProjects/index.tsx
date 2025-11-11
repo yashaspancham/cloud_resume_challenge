@@ -61,14 +61,14 @@ const PersonalProjects = () => {
   ];
 
   return (
-    <div className="w-full xl:w-[60%]">
+    <div className="w-full xl:w-[60">
       <div className="flex gap-7 flex-col" ref={PersonalProjectsRef}>
         <p className="text-4xl">Personal Projects</p>
 
         <div className="flex flex-wrap  max-lg:justify-center gap-5">
           {projects.map((item, index) => (
             <div
-              className="w-[300px] h-[400px] flex flex-col gap-3 rounded-xl hover:shadow-[-1px_1px_5px_0px_rgba(255,255,255,0.75)] border-[0.5px] border-[#1a1a1a]"
+              className="bg-[#0d0d0d] w-[300px] h-[400px] flex flex-col gap-3 rounded-xl hover:shadow-[-1px_1px_5px_0px_rgba(255,255,255,0.75)] border-[0.5px] border-[#1a1a1a]"
               key={index}
             >
               <img
