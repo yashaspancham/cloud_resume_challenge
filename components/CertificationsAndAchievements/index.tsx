@@ -56,7 +56,7 @@ const CertificationsAndAchievements = () => {
         </div>
       </div> */}
 
-      <div className="flex flex-col lg:flex-row gap-5 mt-7 lg:items-center bg-[#0d0d0d] rounded-lg hover:shadow-[0_2px_2.5px_0_rgba(255,255,255,0.3)] py-5 px-5">
+      <div className="flex flex-col lg:flex-row gap-5 mt-7 lg:items-center bg-[#0d0d0d] rounded-lg hover:shadow-[0_2px_2.5px_0_rgba(255,255,255,0.3)] py-5 max-lg:px-5">
         <img
           src="/assets/logo/saa-badge.png"
           alt="AWS Solutions Architect logo"
@@ -72,7 +72,7 @@ const CertificationsAndAchievements = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-5 mt-7 lg:items-center bg-[#0d0d0d] rounded-lg hover:shadow-[0_2px_2.5px_0_rgba(255,255,255,0.3)] py-5">
+      <div className="flex flex-col lg:flex-row gap-5 mt-7 lg:items-center bg-[#0d0d0d] rounded-lg hover:shadow-[0_2px_2.5px_0_rgba(255,255,255,0.3)] py-5 max-lg:px-5">
         <img
           src="/assets/logo/clf-badge.png"
           alt="AWS Solutions Architect logo"
@@ -88,7 +88,7 @@ const CertificationsAndAchievements = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-5 mt-7 lg:items-center bg-[#0d0d0d] rounded-lg hover:shadow-[0_2px_2.5px_0_rgba(255,255,255,0.3)] py-5">
+      <div className="flex flex-col lg:flex-row gap-5 mt-7 lg:items-center bg-[#0d0d0d] rounded-lg hover:shadow-[0_2px_2.5px_0_rgba(255,255,255,0.3)] py-5 max-lg:px-5">
         <img
           src="/assets/logo/nmam_institute_of_technology_logo.jpeg"
           alt="NMAMIT logo"

@@ -30,15 +30,17 @@ const PersonalProjects = () => {
   }, []);
 
   const projects = [
+    //limit techStack to 4 items to maintain design consistency
     {
-      //limit techStack to 4 items to maintain design consistency
-      imageSrc: "/assets/thumbnail/Reflection.jpeg",
-      title: "Reflections",
-      name: "reflections",
-      description:
-        "A digital diary application for capturing daily thoughts and memories.",
-      techStack: ["React Native", "Expo", "Node.js", "Express.js"],
-      github: "https://github.com/yashaspancham/reflections_fe",
+      imageSrc: "/assets/thumbnail/genericSAASlanding page.png",
+      title: "Generic Landing Page",
+      name: "",
+      docUrl:
+        "https://medium.com/@yashaspancham/generic-saas-landing-page-3dbb3906340a",
+      description: "A Generic Landing Page For a SaaS company",
+      techStack: ["next.js", "TailwindCSS", "Figma"],
+      github:
+        "https://github.com/yashaspancham/generic-landing-page-for-saas-company",
     },
     {
       imageSrc: "/preview.png",
@@ -58,10 +60,19 @@ const PersonalProjects = () => {
       techStack: ["Python", "AWS S3", "AWS Lambda", "AWS RDS"],
       github: "https://github.com/yashaspancham/simple-ETL",
     },
+    {
+      imageSrc: "/assets/thumbnail/Reflection.jpeg",
+      title: "Reflections",
+      name: "reflections",
+      description:
+        "A digital diary application for capturing daily thoughts and memories.",
+      techStack: ["React Native", "Expo", "Node.js", "Express.js"],
+      github: "https://github.com/yashaspancham/reflections_fe",
+    },
   ];
 
   return (
-    <div className="w-full xl:w-[60">
+    <div className="w-full xl:w-[60%]">
       <div className="flex gap-7 flex-col" ref={PersonalProjectsRef}>
         <p className="text-4xl">Personal Projects</p>
 
@@ -80,7 +91,7 @@ const PersonalProjects = () => {
                 className="object-cover w-[300px] h-[170px] rounded-tr-xl rounded-tl-xl"
               />
               <div className="flex flex-col gap-3 p-2.5">
-                <p className="text-2xl line-clamp-2">{item.title}</p>
+                <p className="text-2xl line-clamp-1">{item.title}</p>
                 <p className="text-sm line-clamp-2">{item.description}</p>
                 <div className="flex flex-wrap">
                   {item.techStack.map((tech, techIndex) => (
@@ -104,9 +115,18 @@ const PersonalProjects = () => {
                     </button>
                   </a>
                   <button
-                    onClick={() =>
-                      router.push(`/project-details?project-name=${item.name}`)
-                    }
+                    onClick={() => {
+                      if (item.name !== "") {
+                        router.push(
+                          `/project-details?project-name=${item.name}`
+                        );
+                      } else {
+                        window.open(
+                          "https://medium.com/@yashaspancham/generic-saas-landing-page-3dbb3906340a",
+                          "_blank"
+                        );
+                      }
+                    }}
                     className="bg-[#b5c13c] py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer"
                   >
                     <FaExternalLinkAlt />
@@ -117,7 +137,7 @@ const PersonalProjects = () => {
             </div>
           ))}
         </div>
-      <ContactMeButton extraCSS="w-fit h-fit mt-5" />
+        <ContactMeButton extraCSS="w-fit h-fit mt-5" />
       </div>
     </div>
   );
