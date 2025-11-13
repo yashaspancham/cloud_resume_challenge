@@ -37,7 +37,7 @@ const PersonalProjects = () => {
       name: "",
       docUrl:
         "https://medium.com/@yashaspancham/generic-saas-landing-page-3dbb3906340a",
-      description: "A Generic Landing Page For a SaaS company",
+      description: "A Generic Landing Page For a SaaS company. Converting design to code",
       techStack: ["next.js", "TailwindCSS", "Figma"],
       github:
         "https://github.com/yashaspancham/generic-landing-page-for-saas-company",
