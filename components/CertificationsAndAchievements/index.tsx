@@ -66,7 +66,7 @@ const CertificationsAndAchievements = () => {
           <div className="text-xl md:text-2xl break-words">
             AWS Certified Solutions Architect - Associate
           </div>
-          <p>ID- e50500b14f934279bf01c73e5e6ab1a7</p>
+          <p className="break-words">ID- e50500b14f934279bf01c73e5e6ab1a7</p>
           <p>Issued on: Jan 2025</p>
           <p>Expires on: Jan 2028</p>
         </div>
@@ -82,7 +82,7 @@ const CertificationsAndAchievements = () => {
           <p className="text-xl md:text-2xl break-words w-fit">
             AWS Certified Cloud Practitioner
           </p>
-          <p>ID- 7c943f8205004c48a30a69ef022d5011</p>
+          <p className="break-words">ID- 7c943f8205004c48a30a69ef022d5011</p>
           <p>Issued on: Aug 2024</p>
           <p>Expires on: Jan 2028</p>
         </div>
