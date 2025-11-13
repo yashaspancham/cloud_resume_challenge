@@ -1,17 +1,19 @@
-Visit the website at (https://www.yashas-dev.com) and read about this project here (https://www.yashas-dev.com/project-details/?project-name=cloud-resume-challenge)
+Visit the live website 👉 [yashas-dev.com](https://www.yashas-dev.com)  
+Read more about this project here 👉 [Cloud Resume Challenge Details](https://www.yashas-dev.com/project-details/?project-name=cloud-resume-challenge)
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🧠 Tech Stack
+- **Framework:** Next.js  
+- **Styling:** TailwindCSS  
+- **Language:** TypeScript  
+- **DOM Animation:** GSAP  
+- **3D Animation:** Three.js  
+- **Hosting:** AWS S3  
 
-## To run on local machine
-
-First, run the development server:
+## 🛠️ Run Locally
+Clone the repository and start the development server:
 
 ```bash
+git clone https://github.com/yashaspancham/cloud_resume_challenge.git
+cd cloud_resume_challenge
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
