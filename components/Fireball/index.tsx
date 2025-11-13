@@ -9,13 +9,14 @@ const FireballGroup = dynamic(() => import("@/components/FireballGroup"), {
 });
 
 const FireBall = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const [cameraPosition, setCameraPosition] = useState<
     [number, number, number]
   >([0, 0, 7]);
 
   useEffect(() => {
     const handleScroll = () => setIsVisible(window.scrollY < 300);
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     const handleResize = () => {
@@ -32,7 +33,6 @@ const FireBall = () => {
         setCameraPosition([0, 0, 7]);
       }
     };
-
     handleResize();
     window.addEventListener("resize", handleResize);
 
@@ -57,7 +57,7 @@ const FireBall = () => {
         <div className="lg:text-9xl md:text-8xl sm:text-7xl text-5xl -skew-x-10 text-gray-200 italic fixed z-2 mb-5">
           Let's build it
           <div className="flex flex-wrap gap-4 text-lg text-white mt-3 justify-center">
-            <ContactMeButton />
+            <ContactMeButton extraCSS="flex items-center justify-center" />
             <a
               href="#personal-projects"
               className="not-italic skew-x-0 text-white bg-[#919a30] hover:bg-[#9aa433] p-3 rounded-lg hover:cursor-pointer"
@@ -70,12 +70,12 @@ const FireBall = () => {
             >
               Certifications
             </a>
-            <a
+            {/* <a
               href="#work-experience"
               className="max-md:hidden not-italic skew-x-0 text-white bg-[#8f00f2] hover:bg-[#9700ff] p-3 rounded-lg hover:cursor-pointer"
             >
               Experience
-            </a>
+            </a> */}
           </div>
         </div>
       )}
