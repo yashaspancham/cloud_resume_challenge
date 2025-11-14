@@ -32,15 +32,26 @@ const PersonalProjects = () => {
   const projects = [
     //limit techStack to 4 items to maintain design consistency
     {
-      imageSrc: "/assets/thumbnail/genericSAASlanding page.png",
+      imageSrc: "/assets/thumbnail/p3.avif",
       title: "Generic Landing Page",
       name: "",
       docUrl:
         "https://medium.com/@yashaspancham/generic-saas-landing-page-3dbb3906340a",
-      description: "A Generic Landing Page For a SaaS company. Converting design to code",
+      description:
+        "A Generic Landing Page For a SaaS company. Converting design to code",
       techStack: ["next.js", "TailwindCSS", "Figma"],
       github:
         "https://github.com/yashaspancham/generic-landing-page-for-saas-company",
+    },
+    {
+      imageSrc: "/assets/thumbnail/p0.avif",
+      title: "Static Site Hosting",
+      name: "",
+      docUrl:
+        "https://medium.com/@yashaspancham/next-js-static-site-on-s3-62d85a851c10",
+      description: "Hosting a Next.js Static Site on AWS S3 Using CloudFront",
+      techStack: ["AWS", "S3", "Cloudfront", "Route 53"],
+      try: "https://generic-saas-landing-page.yashas-dev.com/",
     },
     {
       imageSrc: "/preview.png",
@@ -72,14 +83,14 @@ const PersonalProjects = () => {
   ];
 
   return (
-    <div className="w-full xl:w-[60%]">
+    <div className="w-full 2xl:w-[70%] xl:w-[60%]">
       <div className="flex gap-7 flex-col" ref={PersonalProjectsRef}>
         <p className="text-4xl">Personal Projects</p>
 
         <div className="flex flex-wrap  max-lg:justify-center gap-5">
           {projects.map((item, index) => (
             <div
-              className="bg-[#0d0d0d] w-[300px] h-[400px] flex flex-col gap-3 rounded-xl hover:shadow-[-1px_1px_5px_0px_rgba(255,255,255,0.75)] border-[0.5px] border-[#1a1a1a]"
+              className="bg-[#0d0d0d] w-[300px] h-auto flex flex-col gap-3 rounded-xl hover:shadow-[-1px_1px_5px_0px_rgba(255,255,255,0.75)] border-[0.5px] border-[#1a1a1a]"
               key={index}
             >
               <img
@@ -90,7 +101,7 @@ const PersonalProjects = () => {
                 }
                 className="object-cover w-[300px] h-[170px] rounded-tr-xl rounded-tl-xl"
               />
-              <div className="flex flex-col gap-3 p-2.5">
+              <div className="flex flex-col gap-3 px-5 pt-2 pb-4 ">
                 <p className="text-2xl line-clamp-1">{item.title}</p>
                 <p className="text-sm line-clamp-2">{item.description}</p>
                 <div className="flex flex-wrap">
@@ -104,16 +115,20 @@ const PersonalProjects = () => {
                   ))}
                 </div>
                 <div className="w-[270px] flex gap-2 justify-center">
-                  <a href={item.github} target="_blank">
-                    <button className="bg-neutral-900 py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer">
-                      <img
-                        src={"/assets/logo/githubWhite.png"}
-                        alt="github white logo"
-                        className="h-5"
-                      />
-                      <p>Code</p>
-                    </button>
-                  </a>
+                  {item.github && (
+                    <a href={item.github} target="_blank">
+                      <button
+                        className={`bg-neutral-900 py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer`}
+                      >
+                        <img
+                          src={"/assets/logo/githubWhite.png"}
+                          alt="github white logo"
+                          className="h-5"
+                        />
+                        <p>Code</p>
+                      </button>
+                    </a>
+                  )}
                   <button
                     onClick={() => {
                       if (item.name !== "") {
@@ -121,17 +136,33 @@ const PersonalProjects = () => {
                           `/project-details?project-name=${item.name}`
                         );
                       } else {
-                        window.open(
-                          "https://medium.com/@yashaspancham/generic-saas-landing-page-3dbb3906340a",
-                          "_blank"
-                        );
+                        window.open(item.docUrl, "_blank");
                       }
                     }}
-                    className="bg-[#b5c13c] py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer"
+                    className={`${
+                      item.github ? "bg-[#b5c13c]" : "bg-neutral-900"
+                    } py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer`}
                   >
                     <FaExternalLinkAlt />
                     <p>Docs</p>
                   </button>
+                  {item.try && (
+                    <button
+                      onClick={() => {
+                        if (item.name !== "") {
+                          router.push(
+                            `/project-details?project-name=${item.name}`
+                          );
+                        } else {
+                          window.open(item.try, "_blank");
+                        }
+                      }}
+                      className={`bg-[#b5c13c] py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer`}
+                    >
+                      <FaExternalLinkAlt />
+                      <p>Try</p>
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
