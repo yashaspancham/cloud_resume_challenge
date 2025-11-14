@@ -1,13 +1,12 @@
 import Link from "next/link";
 
-
 const Contects = () => {
   return (
     <div className="flex gap-10 mt-10">
-      <Link href="https://github.com/yashaspancham" target="_blank">
+      <Link href={"https://wellfound.com/u/yashas-pancham-kr"} target="_blank">
         <img
-          src="/assets/logo/github.png"
-          alt="Github Profile"
+          src="/assets/logo/wellfound-logo.png"
+          alt="wellfound profile"
           width={40}
           height={40}
         />
@@ -19,6 +18,14 @@ const Contects = () => {
         <img
           src="/assets/logo/linkedin.png"
           alt="linkedin Profile"
+          width={40}
+          height={40}
+        />
+      </Link>
+      <Link href="https://github.com/yashaspancham" target="_blank">
+        <img
+          src="/assets/logo/github.png"
+          alt="Github Profile"
           width={40}
           height={40}
         />

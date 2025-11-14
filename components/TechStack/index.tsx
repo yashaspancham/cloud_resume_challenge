@@ -47,6 +47,7 @@ const techLogos = [
   { techName: "Linux", src: "/assets/logo/tux.png", alt: "linux logo" },
   { techName: "NGINX", src: "/assets/logo/nginx.png", alt: "nginx logo" },
   { techName: "Github", src: "/assets/logo/github.png", alt: "github logo" },
+  { techName: "Docker", src: "/assets/logo/docker.png", alt: "docker logo" },
   {
     techName: "Lambda",
     src: "/assets/logo/lambdaIcon.png",
@@ -77,11 +78,6 @@ const techLogos = [
     techName: "Cursor",
     src: "/assets/logo/cursorLogo.jpeg",
     alt: "Cursor logo",
-  },
-  {
-    techName: "Github Copilot",
-    src: "/assets/logo/githubCopilotLogo.jpeg",
-    alt: "Github Copilot logo",
   },
 ];
 
