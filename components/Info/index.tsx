@@ -41,7 +41,7 @@ const Info = () => {
         <button className="self-start  bg-[#191919] hover:bg-[#262626] p-2 xl:p-3 rounded-xl">
           <a
             className=""
-            href="https://drive.google.com/file/d/1-qrKkM7L-ExmNCxVoHsFMe0OTEzGPJcx/view"
+            href="/assets/Yashas Resume.pdf"
             target="_blank"
           >
             My Resume
