@@ -48,6 +48,7 @@ const techLogos = [
   { techName: "NGINX", src: "/assets/logo/nginx.png", alt: "nginx logo" },
   { techName: "Github", src: "/assets/logo/github.png", alt: "github logo" },
   { techName: "Docker", src: "/assets/logo/docker.png", alt: "docker logo" },
+  { techName: "Kubernetes", src: "/assets/logo/k8s.png", alt: "k8s logo" },
   {
     techName: "Lambda",
     src: "/assets/logo/lambdaIcon.png",
