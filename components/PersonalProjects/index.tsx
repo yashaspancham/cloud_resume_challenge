@@ -32,6 +32,16 @@ const PersonalProjects = () => {
   const projects = [
     //limit techStack to 4 items to maintain design consistency
     {
+      imageSrc: "/assets/thumbnail/local-k8s.png",
+      title: "Local CRUD with k8s",
+      name: "",
+      docUrl:
+        "https://medium.com/@yashaspancham/crud-with-kubernetes-09a673229d20",
+      description: "Set up a small CRUD web application with Minikube locally.",
+      techStack: ["Kubernetes", "minikube", "kubectl"],
+      github: "https://github.com/yashaspancham/crud-k8s",
+    },
+    {
       imageSrc: "/assets/thumbnail/p3.avif",
       title: "Generic Landing Page",
       name: "",
