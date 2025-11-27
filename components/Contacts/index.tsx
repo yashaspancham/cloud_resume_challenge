@@ -2,11 +2,19 @@ import Link from "next/link";
 
 const Contects = () => {
   return (
-    <div className="flex gap-10 mt-10">
+    <div className="flex gap-10 mt-10 flex-wrap">
       <Link href={"https://wellfound.com/u/yashas-pancham-kr"} target="_blank">
         <img
           src="/assets/logo/wellfound-logo.png"
           alt="wellfound profile"
+          width={40}
+          height={40}
+        />
+      </Link>
+      <Link href={"https://www.naukri.com/mnjuser/profile?id=&altresid"} target="_blank">
+        <img
+          src="/assets/logo/naukriLogo.png"
+          alt="naukri profile"
           width={40}
           height={40}
         />
