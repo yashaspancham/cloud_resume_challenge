@@ -32,18 +32,15 @@ const Info = () => {
         <p className="">Hi! I am </p>
         <p className="xl:text-[150px] text-5xl">Yashas</p>
         <p className="xl:w-1/2 text-wrap">
-          A Software Engineer focused on building web and cloud systems. Skilled
-          in full-stack development and cloud systems.
+          I have a year of <a href="#work-experience" className="text-[#9700ff] underline">experience</a> as a web dev, have built multiple{" "} 
+          <a href="#personal-projects" className="text-[#f4fe6c] underline">personal projects</a>{" "}
+          and hold 2 AWS {" "}<a href="#certifications-and-achievements" className="text-[#f3ff4d] underline">certifications</a>(AWS SAA and AWS CCP).
         </p>
       </div>
       <Contacts />
       <div className="flex gap-2 items-center mt-4">
         <button className="self-start  bg-[#191919] hover:bg-[#262626] p-2 xl:p-3 rounded-xl">
-          <a
-            className=""
-            href="/assets/Yashas Resume.pdf"
-            target="_blank"
-          >
+          <a className="" href="/assets/Yashas Resume.pdf" target="_blank">
             My Resume
           </a>
         </button>
