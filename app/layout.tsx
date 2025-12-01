@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   keywords: [
     "Yashas",
     "developer",
+    "Bangalore",
+    "Bengaluru",
     "portfolio",
     "Next.js",
     "React",
