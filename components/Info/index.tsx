@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { countVisitors } from "@/API";
 import ContactMeButton from "../ContactMeButton";
+import ResumeButton from "../ResumeButton";
 
 const Info = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -39,11 +40,7 @@ const Info = () => {
       </div>
       <Contacts />
       <div className="flex gap-2 items-center mt-4">
-        <button className="self-start  bg-[#191919] hover:bg-[#262626] p-2 xl:p-3 rounded-xl">
-          <a className="" href="/assets/Yashas Resume.pdf" target="_blank">
-            My Resume
-          </a>
-        </button>
+        <ResumeButton/>
         <ContactMeButton />
       </div>
     </div>

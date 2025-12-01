@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Constants from "@/components/Contacts";
+import ResumeButton from "../ResumeButton";
 
 const ContactMe = () => {
   let timeline = gsap.timeline();
@@ -35,6 +36,7 @@ const ContactMe = () => {
         <p>📧 yashaspancham@gmail.com</p>
       </div>
       <Constants />
+      <ResumeButton extraCSS="mt-5"/>
     </div>
   );
 };
