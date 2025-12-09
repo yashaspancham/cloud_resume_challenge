@@ -1,6 +1,4 @@
-interface ResumeButtonT{
-    extraCSS?:string
-}
+import {ResumeButtonT} from "@/utils/types";
 
 const ResumeButton = ({extraCSS}:ResumeButtonT) => {
   return (

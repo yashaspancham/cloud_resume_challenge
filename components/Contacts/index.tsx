@@ -3,6 +3,15 @@ import Link from "next/link";
 const Contects = () => {
   return (
     <div className="flex gap-10 mt-10 flex-wrap">
+      {/* //upworkIcon.png */}
+      <Link href={"https://www.upwork.com/freelancers/~016a78255b9cac057c"} target="_blank">
+        <img
+          src="/assets/logo/upworkIcon.webp"
+          alt="upwork profile"
+          width={40}
+          height={40}
+        />
+      </Link>
       <Link href={"https://wellfound.com/u/yashas-pancham-kr"} target="_blank">
         <img
           src="/assets/logo/wellfound-logo.png"

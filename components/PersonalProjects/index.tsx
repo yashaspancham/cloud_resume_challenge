@@ -2,15 +2,17 @@
 
 import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import gsap from "gsap";
 import ContactMeButton from "../ContactMeButton";
+import { projects } from "../../projectsData/personalProjects";
+import PersonalProjectCard from "../PersonalProjectCard";
+import { PersonalProjectCardPropsT } from "../../utils/types";
+
 
 const PersonalProjects = () => {
-  let timeline = gsap.timeline();
+  const router=useRouter();
   const PersonalProjectsRef = useRef(null);
-  const router = useRouter();
-
+  let timeline = gsap.timeline();
   useEffect(() => {
     const context = gsap.context(() => {
       const xValue = window.innerWidth < 820 ? 0 : -100;
@@ -29,156 +31,24 @@ const PersonalProjects = () => {
     return () => context.revert();
   }, []);
 
-  const projects = [
-    //limit techStack to 4 items to maintain design consistency
-    {
-      imageSrc: "/assets/thumbnail/local-k8s.png",
-      title: "Local CRUD with k8s",
-      name: "",
-      docUrl:
-        "https://medium.com/@yashaspancham/crud-with-kubernetes-09a673229d20",
-      description: "Set up a small CRUD web application with Minikube locally.",
-      techStack: ["Kubernetes", "minikube", "kubectl"],
-      github: "https://github.com/yashaspancham/crud-k8s",
-    },
-    {
-      imageSrc: "/assets/thumbnail/p3.avif",
-      title: "Generic Landing Page",
-      name: "",
-      docUrl:
-        "https://medium.com/@yashaspancham/generic-saas-landing-page-3dbb3906340a",
-      description:
-        "A Generic Landing Page For a SaaS company. Converting design to code",
-      techStack: ["next.js", "TailwindCSS", "Figma"],
-      github:
-        "https://github.com/yashaspancham/generic-landing-page-for-saas-company",
-    },
-    {
-      imageSrc: "/assets/thumbnail/p0.avif",
-      title: "Static Site Hosting",
-      name: "",
-      docUrl:
-        "https://medium.com/@yashaspancham/next-js-static-site-on-s3-62d85a851c10",
-      description: "Hosting a Next.js Static Site on AWS S3 Using CloudFront",
-      techStack: ["AWS", "S3", "Cloudfront", "Route 53"],
-      try: "https://generic-saas-landing-page.yashas-dev.com/",
-    },
-    {
-      imageSrc: "/preview.png",
-      title: "Cloud Resume Challenge",
-      name: "cloud-resume-challenge",
-      description:
-        "A project to build a resume website hosted on AWS, showcasing cloud and Animation skills.",
-      techStack: ["Next.js", "3.js", "GSAP", "AWS S3"],
-      github: "https://github.com/yashaspancham/cloud_resume_challenge",
-    },
-    {
-      imageSrc: "/assets/thumbnail/ETL.png",
-      title: "Simple ETL",
-      name: "simple-ETL",
-      description:
-        "Data from .csv in S3 to a Database in RDS, using AWS Lambda and Python.",
-      techStack: ["Python", "AWS S3", "AWS Lambda", "AWS RDS"],
-      github: "https://github.com/yashaspancham/simple-ETL",
-    },
-    {
-      imageSrc: "/assets/thumbnail/Reflection.jpeg",
-      title: "Reflections",
-      name: "reflections",
-      description:
-        "A digital diary application for capturing daily thoughts and memories.",
-      techStack: ["React Native", "Expo", "Node.js", "Express.js"],
-      github: "https://github.com/yashaspancham/reflections_fe",
-    },
-  ];
-
   return (
     <div className="w-full 2xl:w-[70%] xl:w-[60%]">
       <div className="flex gap-7 flex-col" ref={PersonalProjectsRef}>
         <p className="text-4xl">Personal Projects</p>
-
         <div className="flex flex-wrap  max-lg:justify-center gap-5">
-          {projects.map((item, index) => (
-            <div
-              className="bg-[#0d0d0d] w-[300px] h-auto flex flex-col gap-3 rounded-xl hover:shadow-[-1px_1px_5px_0px_rgba(255,255,255,0.75)] border-[0.5px] border-[#1a1a1a]"
-              key={index}
-            >
-              <img
-                src={
-                  item.imageSrc && item.imageSrc !== ""
-                    ? item.imageSrc
-                    : "/assets/thumbnail/defaultThumbnail.png"
-                }
-                className="object-cover w-[300px] h-[170px] rounded-tr-xl rounded-tl-xl"
-              />
-              <div className="flex flex-col gap-3 px-5 pt-2 pb-4 ">
-                <p className="text-2xl line-clamp-1">{item.title}</p>
-                <p className="text-sm line-clamp-2">{item.description}</p>
-                <div className="flex flex-wrap">
-                  {item.techStack.map((tech, techIndex) => (
-                    <span
-                      className="text-xs p-1 border-[0.5px] border-white rounded-md mr-2 mb-2"
-                      key={techIndex}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="w-[270px] flex gap-2 justify-center">
-                  {item.github && (
-                    <a href={item.github} target="_blank">
-                      <button
-                        className={`bg-neutral-900 py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer`}
-                      >
-                        <img
-                          src={"/assets/logo/githubWhite.png"}
-                          alt="github white logo"
-                          className="h-5"
-                        />
-                        <p>Code</p>
-                      </button>
-                    </a>
-                  )}
-                  <button
-                    onClick={() => {
-                      if (item.name !== "") {
-                        router.push(
-                          `/project-details?project-name=${item.name}`
-                        );
-                      } else {
-                        window.open(item.docUrl, "_blank");
-                      }
-                    }}
-                    className={`${
-                      item.github ? "bg-[#b5c13c]" : "bg-neutral-900"
-                    } py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer`}
-                  >
-                    <FaExternalLinkAlt />
-                    <p>Docs</p>
-                  </button>
-                  {item.try && (
-                    <button
-                      onClick={() => {
-                        if (item.name !== "") {
-                          router.push(
-                            `/project-details?project-name=${item.name}`
-                          );
-                        } else {
-                          window.open(item.try, "_blank");
-                        }
-                      }}
-                      className={`bg-[#b5c13c] py-2 px-5 rounded-md flex gap-2 items-center hover:cursor-pointer`}
-                    >
-                      <FaExternalLinkAlt />
-                      <p>Try</p>
-                    </button>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
+          {projects.map(
+            (item: PersonalProjectCardPropsT) =>
+              item.id < 6 && <PersonalProjectCard {...item} key={item.id} />
+          )}
         </div>
-        <ContactMeButton extraCSS="w-fit h-fit mt-5" />
+        <div className="flex gap-2 items-center mt-5 max-lg:justify-center justify-start">
+          <ContactMeButton extraCSS="w-fit h-fit" />
+          <button 
+          onClick={()=>router.push('/pp-page')}
+          className="text-white p-2.5 bg-[#0d0d0d] h-fit w-fit rounded hover:cursor-pointer">
+            More Projects
+          </button>
+        </div>
       </div>
     </div>
   );
