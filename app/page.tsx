@@ -9,9 +9,9 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Navbar />
-      <main className="max-md:p-10 max-md:flex max-md:flex-col max-md:gap-20 text-white w-full h-full scroll-smooth">
+      <div className="max-md:p-10 max-md:flex max-md:flex-col max-md:gap-20 text-white w-full h-full scroll-smooth">
         <FireBall />
         <section className="mt-20 md:mx-20 md:p-20 md:my-20" id="hi">
           <Info />
@@ -24,7 +24,7 @@ export default function Home() {
         </section>
         <section
           id="personal-projects"
-          className="md:p-20 md:my-20 md:mx-20 md:flex"
+          className="md:p-20 md:my-10 md:mx-20 md:flex"
         >
           <PersonalProjects />
         </section>
@@ -54,7 +54,7 @@ export default function Home() {
             ↑ Top
           </a>
         </section>
-      </main>
-    </>
+      </div>
+    </main>
   );
 }

@@ -20,7 +20,6 @@ const FireballGroup = () => {
   const [targetX, setTargetX] = useState(0);
   const [color, setColor] = useState("darkred");
   const [slowedAnimation, setSlowedAnimation] = useState(false);
-  const visibleSections = useRef(new Set<string>());
 
   useEffect(() => {
     let currentSection: string | null = null;
@@ -33,21 +32,18 @@ const FireballGroup = () => {
 
       const observer = new IntersectionObserver(
         ([entry]) => {
+          console.log("Intersection", iddName, entry.intersectionRatio, entry.isIntersecting);
           if (entry.isIntersecting) {
             currentSection = iddName;
-            setTargetX(x);
-            setColor(color);
             setSlowedAnimation(true);
+            setColor(color);
+            setTargetX(x);
           } else if (currentSection === iddName) {
             currentSection = null;
             setTargetX(0);
             setSlowedAnimation(false);
           }
         },
-        {
-          threshold: 0.5,
-          rootMargin: "0px 0px -25% 0px",
-        }
       );
 
       observer.observe(element);
