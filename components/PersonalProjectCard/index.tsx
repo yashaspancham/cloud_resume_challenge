@@ -43,7 +43,7 @@ const PersonalProjectCard = (item : PersonalProjectCardPropsT) => {
               </button>
             </a>
           )}
-          <button
+          {(item.docUrl || item.name!=="")&& <button
             onClick={() => {
               if (item.name !== "") {
                 router.push(`/project-details?project-name=${item.name}`);
@@ -57,7 +57,7 @@ const PersonalProjectCard = (item : PersonalProjectCardPropsT) => {
           >
             <FaExternalLinkAlt />
             <p>Docs</p>
-          </button>
+          </button>}
           {item.try && (
             <button
               onClick={() => {
