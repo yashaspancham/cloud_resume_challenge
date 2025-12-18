@@ -20,11 +20,17 @@ const FireBall = () => {
     {
       name: "Generic SaaS Landing Page",
       link: "https://generic-saas-landing-page.yashas-dev.com",
+    },{
+      name: "eCom Elibass Landing Page",
+      link: "https://ecom-elibass-landing-page.yashas-dev.com/",
     },
     {
       name: "(This website)Cloud Resume Challange",
       link: "#",
     },
+    {name:"More",
+      link:"#personal-projects"
+    }
   ];
 
   useEffect(() => {
@@ -117,7 +123,7 @@ const FireBall = () => {
           className="absolute z-3 bg-black p-5  rounded-lg text-xl h-[300px]"
         >
           <p className="bg-[#111111] p-3 text-3xl bold mb-5">
-            Links to Live Projects
+            Live Projects
           </p>
           <div className="flex flex-col gap-2">
             {liveProjects.map((item, index) => (

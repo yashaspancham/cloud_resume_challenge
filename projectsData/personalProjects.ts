@@ -10,7 +10,18 @@ enum Catagory {
 
 export const projects: PersonalProjectCardPropsT[] = [
     {
-        id: 0,
+        id: 7,
+        imageSrc: "/assets/thumbnail/ecom_elibass_landing_page.png",
+        title: "Elibass Landing Page",
+        name: "",
+        description: "Converted figma to pixel perfect UI with Next.js.Figma in github Link",
+        techStack: ["Next.js", "TailwindCSS", "AWS S3", "Figma"],
+        try:"https://ecom-elibass-landing-page.yashas-dev.com/",
+        github: "https://github.com/yashaspancham/eCom_Elibass_Landing_page",
+        catagory: [Catagory.All,Catagory.Frontend],
+    },
+    {
+        id: 6,
         imageSrc: "/assets/thumbnail/project_z_fe.jpeg",
         title: "Project_z Frontend",
         name: "",
@@ -22,7 +33,7 @@ export const projects: PersonalProjectCardPropsT[] = [
         catagory: [Catagory.All,Catagory.Frontend],
     },
     {
-        id: 1,
+        id: 5,
         imageSrc: "/assets/thumbnail/local-k8s.png",
         title: "Local CRUD with k8s",
         name: "",
@@ -34,7 +45,7 @@ export const projects: PersonalProjectCardPropsT[] = [
         catagory: [Catagory.All,Catagory.DevOps],
     },
     {
-        id: 2,
+        id: 4,
         imageSrc: "/assets/thumbnail/p3.avif",
         title: "Generic Landing Page",
         name: "",
@@ -60,7 +71,7 @@ export const projects: PersonalProjectCardPropsT[] = [
         catagory:[Catagory.All,Catagory.DevOps,Catagory.Cloud],
     },
     {
-        id: 4,
+        id: 2,
         imageSrc: "/preview.png",
         title: "Cloud Resume Challenge",
         name: "cloud-resume-challenge",
@@ -71,7 +82,7 @@ export const projects: PersonalProjectCardPropsT[] = [
         catagory:[Catagory.All,Catagory.Cloud,Catagory.Frontend,Catagory.DevOps],
     },
     {
-        id: 5,
+        id: 1,
         imageSrc: "/assets/thumbnail/ETL.png",
         title: "Simple ETL",
         name: "simple-ETL",
@@ -82,7 +93,7 @@ export const projects: PersonalProjectCardPropsT[] = [
         catagory:[Catagory.All,Catagory.Cloud,Catagory.Backend],
     },
     {
-        id: 6,
+        id: 0,
         imageSrc: "/assets/thumbnail/Reflection.jpeg",
         title: "Reflections",
         name: "reflections",
