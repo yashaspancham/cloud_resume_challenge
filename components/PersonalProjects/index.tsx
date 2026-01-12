@@ -38,13 +38,13 @@ const PersonalProjects = () => {
         <div className="flex flex-wrap  max-lg:justify-center gap-5">
           {projects.map(
             (item: PersonalProjectCardPropsT) =>
-              item.id > 2 && <PersonalProjectCard {...item} key={item.id} />
+              item.id > 3 && <PersonalProjectCard {...item} key={item.id} />
           )}
         </div>
         <div className="flex gap-2 items-center mt-5 max-lg:justify-center justify-start">
           <ContactMeButton extraCSS="w-fit h-fit" />
           <button 
-          onClick={()=>router.push('/pp-page')}
+          onClick={()=>router.push('/projects')}
           className="text-white p-2.5 bg-[#0d0d0d] h-fit w-fit rounded hover:cursor-pointer">
             More Projects
           </button>
