@@ -10,13 +10,25 @@ export enum Catagory {
 
 export const projects: PersonalProjectCardPropsT[] = [
   {
+    id: 10,
+    imageSrc:
+      "/assets/thumbnail/legal_documents_storage.jpg",
+    title: "Legal Document Storage",
+    name: "",
+    description: "Case Study: Case study: Managing old documents with S3",
+    techStack: ["AWS S3", "AWS", "S3 Lifecycle Policies"],
+    docUrl:
+      "https://medium.com/@yashaspancham/legal-document-storage-f16f158a3c23",
+    catagory: [Catagory.All, Catagory.Cloud],
+  },
+  {
     id: 9,
     imageSrc:
       "/assets/thumbnail/serverless-saas-web-application-case-study.jpg",
     title: "Serverless Web SaaS Application",
     name: "",
     description: "Case Study: Designing a Serverless Web SaaS Application",
-    techStack: ["Serverless", "AWS","Architecture"],
+    techStack: ["Serverless", "AWS", "Architecture"],
     docUrl:
       "https://medium.com/@yashaspancham/serverless-web-saas-application-57558b4f590a",
     catagory: [Catagory.All, Catagory.Cloud],

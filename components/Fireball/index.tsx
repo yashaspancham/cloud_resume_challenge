@@ -20,7 +20,8 @@ const FireBall = () => {
     {
       name: "Generic SaaS Landing Page",
       link: "https://generic-saas-landing-page.yashas-dev.com",
-    },{
+    },
+    {
       name: "eCom Elibass Landing Page",
       link: "https://ecom-elibass-landing-page.yashas-dev.com/",
     },
@@ -28,9 +29,7 @@ const FireBall = () => {
       name: "(This website)Cloud Resume Challange",
       link: "#",
     },
-    {name:"More",
-      link:"#personal-projects"
-    }
+    { name: "More", link: "/projects" },
   ];
 
   useEffect(() => {
@@ -91,7 +90,6 @@ const FireBall = () => {
     setPopUpVisible(true);
   };
 
-
   return (
     <section
       className="2xl:h-[40vw] xl:h-[65vw] lg:h-[100vw] md:h-[110vw] sm:h-[120vw] h-[150vw] 
@@ -122,9 +120,7 @@ const FireBall = () => {
           ref={popUpRef}
           className="absolute z-3 bg-black p-5  rounded-lg text-xl h-[300px]"
         >
-          <p className="bg-[#111111] p-3 text-3xl bold mb-5">
-            Live Projects
-          </p>
+          <p className="bg-[#111111] p-3 text-3xl bold mb-5">Live Projects</p>
           <div className="flex flex-col gap-2">
             {liveProjects.map((item, index) => (
               <a

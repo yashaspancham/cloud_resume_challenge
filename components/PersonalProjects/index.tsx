@@ -38,7 +38,7 @@ const PersonalProjects = () => {
         <div className="flex flex-wrap  max-lg:justify-center gap-5">
           {projects.map(
             (item: PersonalProjectCardPropsT) =>
-              item.id > 3 && <PersonalProjectCard {...item} key={item.id} />
+              item.id > 4 && <PersonalProjectCard {...item} key={item.id} />
           )}
         </div>
         <div className="flex gap-2 items-center mt-5 max-lg:justify-center justify-start">
