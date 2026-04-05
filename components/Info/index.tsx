@@ -33,14 +33,24 @@ const Info = () => {
         <p className="">Hi! I am </p>
         <p className="xl:text-[150px] text-5xl">Yashas</p>
         <p className="xl:w-1/2 text-wrap">
-          I have a year of <a href="#work-experience" className="text-[#9700ff] underline">experience</a> as a web dev, have built multiple{" "} 
-          <a href="#personal-projects" className="text-[#f4fe6c] underline">personal projects</a>{" "}
-          and hold 2 AWS {" "}<a href="#certifications-and-achievements" className="text-[#f3ff4d] underline">certifications</a>(AWS SAA and AWS CCP).
+          I have{" "}
+          <a href="#work-experience" className="text-[#9700ff] underline">
+            experience
+          </a>{" "}
+          building and deploying cloud-native applications on AWS, and hold 2
+          <a
+            href="#certifications-and-achievements"
+            className="text-[#f3ff4d] underline"
+          >
+            AWS certifications
+          </a>
+          (AWS SAA and AWS CCP), and have worked across backend development and
+          DevOps.
         </p>
       </div>
       <Contacts />
       <div className="flex gap-2 items-center mt-4">
-        <ResumeButton/>
+        <ResumeButton />
         <ContactMeButton />
       </div>
     </div>
