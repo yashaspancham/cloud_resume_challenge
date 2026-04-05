@@ -45,7 +45,7 @@ const PersonalProjects = () => {
           <ContactMeButton extraCSS="w-fit h-fit" />
           <button 
           onClick={()=>router.push('/projects')}
-          className="text-white p-2.5 bg-[#0d0d0d] h-fit w-fit rounded hover:cursor-pointer">
+          className="text-white p-2.5 bg-[#919a30] h-fit w-fit rounded hover:cursor-pointer">
             More Projects
           </button>
         </div>

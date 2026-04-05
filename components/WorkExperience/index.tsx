@@ -28,40 +28,46 @@ const WorkExperience = () => {
     <div className="flex gap-7 flex-col xl:w-[50%]" ref={WorkExperienceRef}>
       <p className="text-3xl md:text-4xl">Work Experience</p>
       <div className="flex gap-5 items-start max-md:flex-col bg-[#0d0d0d] rounded-lg hover:shadow-[0_2px_2.5px_0_rgba(255,255,255,0.3)] p-5">
+        <img src={"/assets/logo/marelli-logo.jpeg"} alt="Marelli Logo" />
+        <div>
+          <p className="text-xl md:text-2xl">
+            Software Automation & Testing Apprentice
+          </p>
+          <p className="text-sm">March 2026-Present @Marelli</p>
+          <ul className="list-disc marker:text-white ml-5 text-md md:text-lg">
+            <li className=" wrap">
+              Working on software testing for automotive <b>TCU</b> (Telematics Control
+              Unit) systems. Responsibilities include <b>firmware flashing</b> and
+              monitoring device power consumption during sleep states.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="flex gap-5 items-start max-md:flex-col bg-[#0d0d0d] rounded-lg hover:shadow-[0_2px_2.5px_0_rgba(255,255,255,0.3)] p-5">
         <img src={"/assets/logo/CodeZyngLogo.svg"} alt="codezyng Logo" />
         <div>
           <p className="text-xl md:text-2xl">Software Engineer</p>
           <p className="text-sm">June 2024-March 2025 @Codezyng </p>
           <ul className="list-disc marker:text-white ml-5  text-md md:text-lg">
             <li className=" wrap">
-              Implemented scalable, responsive and optimized business websites,
-              landing pages, e-commerce websites and dashboards.{" "}
+              <b>Dockerized</b> multiple applications for deployment and hosting
+              on <b>AWS</b>
             </li>
             <li>
-              Collaborated with designers and users to deliver exactly what the
-              client wanted, ensuring user-friendly interfaces and meeting
-              business requirements.
+              Built and showcased <b>MVPs</b> and <b>POCs</b> to validate
+              product feasibility and gather client feedback
             </li>
             <li className="wrap">
-              Demonstrated quick project approvals and feasibility by developing
-              multiple Proof of Concepts (POCs) and Minimum Viable Products
-              (MVPs) for potential clients, leveraging AI tools like{" "}
-              <b>Cursor</b> and <b>Lovable</b>.
+              Integrated <b>RESTful APIs</b> across multiple client projects in
+              healthcare, IT, and e-commerce domains
             </li>
             <li className=" wrap">
-              Achieved a 15% increase in organic traffic by enhancing website
-              <b> SEO</b> strategies in collaboration with business analysts,
-              improving visibility and search engine rankings.
+              Achieved 15% increase in organic traffic through <b>SEO</b>{" "}
+              optimization in collaboration with business analysts
             </li>
             <li className=" wrap">
-              Achieved a 20% improvement in maintainability, performance, and
-              development speed by writing <b>clean, reusable code</b> and
-              leveraging AI tools like <b>Cursor and GitHub Copilot</b>.
-            </li>
-            <li className=" wrap">
-              Used technologies like <b>Axios</b>, <b>Redux</b>,{" "}
-              <b>Material UI</b>, <b>Tailwind CSS</b>, <b>Azure Blob Storage</b>
-              , <b>Ghost CMS</b>, and <b>Strapi</b> for development.
+              Built e-commerce platform from scratch with <b>Next.js</b>,{" "}
+              <b>TypeScript</b>,<b>TailwindCSS</b>, and <b>Strapi CMS</b>
             </li>
           </ul>
         </div>
@@ -71,7 +77,7 @@ const WorkExperience = () => {
         <img src={"/assets/logo/CodeZyngLogo.svg"} alt="codezyng Logo" />
         <div>
           <p className="text-xl md:text-2xl">Intern Software Engineer</p>
-          <p className="text-sm">Jan 2024-May 2025 @Codezyng</p>
+          <p className="text-sm">Jan 2024-May 2024 @Codezyng</p>
           <ul className="list-disc marker:text-white ml-5 text-md md:text-lg">
             <li className=" wrap">
               Contributed to the development of a comprehensive <b>CRM</b>{" "}
