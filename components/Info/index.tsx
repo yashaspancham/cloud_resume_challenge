@@ -37,7 +37,7 @@ const Info = () => {
           <a href="#work-experience" className="text-[#9700ff] underline">
             experience
           </a>{" "}
-          building and deploying cloud-native applications on AWS, and hold 2
+          building and deploying cloud-native applications on AWS, and hold 2{" "}
           <a
             href="#certifications-and-achievements"
             className="text-[#f3ff4d] underline"
