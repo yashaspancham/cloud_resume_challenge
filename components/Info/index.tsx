@@ -31,21 +31,11 @@ const Info = () => {
     <div className="flex flex-col" ref={infoRef}>
       <div className="xl:text-4xl text-xl">
         <p className="">Hi! I am </p>
-        <p className="xl:text-[150px] text-5xl">Yashas</p>
+        <p className="xl:text-[150px] text-5xl">Yashas,</p>
         <p className="xl:w-1/2 text-wrap">
-          I have{" "}
-          <a href="#work-experience" className="text-[#9700ff] underline">
-            experience
-          </a>{" "}
-          building and deploying cloud-native applications on AWS, and hold 2{" "}
-          <a
-            href="#certifications-and-achievements"
-            className="text-[#f3ff4d] underline"
-          >
-            AWS certifications
-          </a>
-          (AWS SAA and AWS CCP), and have worked across backend development and
-          DevOps.
+          Software Engineer with AWS certifications (SAA, CCP) and hands-on
+          cloud-native project experience. Professional background in full-stack
+          development; looking to move into backend and cloud engineering.
         </p>
       </div>
       <Contacts />
