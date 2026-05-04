@@ -10,7 +10,7 @@ const FireballGroup = dynamic(() => import("@/components/FireballGroup"), {
 
 const FireBall = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [popUpVisible, setPopUpVisible] = useState<boolean>(false);
+  // const [popUpVisible, setPopUpVisible] = useState<boolean>(false);
   const [cameraPosition, setCameraPosition] = useState<
     [number, number, number]
   >([0, 0, 7]);
@@ -60,35 +60,35 @@ const FireBall = () => {
     };
   }, []);
 
-  const popUpRef = useRef<HTMLDivElement | null>(null);
+  // const popUpRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    if (!popUpVisible) {
-      return;
-    }
+  // useEffect(() => {
+  //   if (!popUpVisible) {
+  //     return;
+  //   }
 
-    const handleOutsideClick = (e: MouseEvent | TouchEvent) => {
-      const target = e.target as Node;
-      if (popUpRef.current && !popUpRef.current.contains(target)) {
-        setPopUpVisible(false);
-        document.body.style.overflow = "";
-      }
-    };
+  //   const handleOutsideClick = (e: MouseEvent | TouchEvent) => {
+  //     const target = e.target as Node;
+  //     if (popUpRef.current && !popUpRef.current.contains(target)) {
+  //       setPopUpVisible(false);
+  //       document.body.style.overflow = "";
+  //     }
+  //   };
 
-    document.addEventListener("mousedown", handleOutsideClick);
-    document.addEventListener("touchstart", handleOutsideClick);
+  //   document.addEventListener("mousedown", handleOutsideClick);
+  //   document.addEventListener("touchstart", handleOutsideClick);
 
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-      document.removeEventListener("touchstart", handleOutsideClick);
-      document.body.style.overflow = "";
-    };
-  }, [popUpVisible]);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleOutsideClick);
+  //     document.removeEventListener("touchstart", handleOutsideClick);
+  //     document.body.style.overflow = "";
+  //   };
+  // }, [popUpVisible]);
 
-  const showPopUp = () => {
-    document.body.style.overflow = "hidden";
-    setPopUpVisible(true);
-  };
+  // const showPopUp = () => {
+  //   document.body.style.overflow = "hidden";
+  //   setPopUpVisible(true);
+  // };
 
   return (
     <section
@@ -106,16 +106,16 @@ const FireBall = () => {
           Let's build it
           <div className="flex flex-wrap gap-4 text-lg text-white mt-3 justify-center">
             <ContactMeButton extraCSS="flex items-center justify-center" />
-            <button
-              onClick={() => showPopUp()}
+            <a href="/projects/" target="_blank" rel="noopener noreferrer"
+              // onClick={() => showPopUp()}
               className="not-italic skew-x-0 text-white bg-[#919a30] hover:bg-[#9aa433] p-3 rounded-lg hover:cursor-pointer"
             >
-              Live Projects
-            </button>
+              Projects
+            </a>
           </div>
         </div>
       )}
-      {popUpVisible && (
+      {/* {popUpVisible && (
         <div
           ref={popUpRef}
           className="absolute z-3 bg-black p-5  rounded-lg text-xl h-[300px]"
@@ -134,7 +134,7 @@ const FireBall = () => {
             ))}
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 };
