@@ -12,6 +12,19 @@ export const projects: PersonalProjectCardPropsT[] = [
   {
     id: 10,
     imageSrc:
+      "/assets/thumbnail/calculatorCI.jpg",
+    title: "Calculator CI Pipeline",
+    name: "",
+    description: "Automation testing, logs, reports and build",
+    techStack: ["AWS", "Jenkins", "Python", "Pytest"],
+    github: "https://github.com/yashaspancham/calculator",
+    docUrl:
+      "https://medium.com/@yashaspancham/from-code-to-cloud-automated-testing-jenkins-ci-and-aws-infrastructure-on-a-python-calculator-0aca8cd6e952",
+    catagory: [Catagory.All, Catagory.Cloud, Catagory.DevOps],
+  },
+  {
+    id: 10,
+    imageSrc:
       "/assets/thumbnail/legal_documents_storage.jpg",
     title: "Legal Document Storage",
     name: "",
